@@ -3,7 +3,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Glasy</title>
+	<title>Gllacy</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -24,14 +24,27 @@
 	  </ul>
 	</nav>
   </header>
-<!-- Тут будет слайдер -->
-	<main class="container">
+  <main class="container">
+<!-- Слайдер (1 слайд) -->
+  	  <section class="slider">
+		<ul class="slider-slides">
+	  	  <li class="slider-item">
+	    	<h1 class="slider-title">
+		  	  Крем-брюле и пломбир с малиновым джемом
+	    	</h1>
+	    	<a class="button slider-button" href="#">Давайте оба!</a>	
+	  	  </li>
+		</ul>
+		<input type="radio" id="slide-1" checked>
+		<input type="radio" id="slide-2">
+		<input type="radio" id="slide-3">
+  	  </section>
 	  <div class="contact">
 	  <p>
 	    С 10 до 20, ежедневно
 		<span class="telephone">8 812 450 25 25</span>
 	  </p>
-	</div>
+	  </div>
 	  <section class="features">
 	    <h2 class="visually-hidden"></h2>
 		<ul class="feature-list">
@@ -41,7 +54,7 @@
 				При покупке 2кг любого фруктового мороженого, добавим
 				в ваш заказ банку малинового варенья бесплатно.
 			</p>
-			<a class="button button-1" href="order.html">Хочу варенье!</a>  <!-- Добавил button-1 и button-2, т.к. кнопки разные по ширине и нужно будет отдельно задавать ширину для каждой кнопки -->
+			<a class="button button-raspberry" href="order.html">Хочу варенье!</a>  <!-- Добавил button-1 и button-2, т.к. кнопки разные по ширине и нужно будет отдельно задавать ширину для каждой кнопки -->
 		  </li>
 		  <li class="feature-item">
 		    <h3>Шоколадки даром!</h3>
@@ -49,17 +62,17 @@
 				При покупке 2кг пломбира, добавим в ваш заказ упаковку
 				вкуснейшей шоколадной присыпки совершенно бесплатно.
 			</p>
-			<a class="button button-1" href="order.html">Хочу варенье!</a>
+			<a class="button button-chocolate" href="order.html">Хочу варенье!</a>
 		  </li>
 		</ul>
 	  </section>
 	  <section class="product">
-	    <div class="product-1">
+	    <div class="product-item">
 		  <p class="hit">ХИТ</p>
 		  <img src="./img/product-1.png" alt="Мороженое сливочное с апельсиновым джемом">
 			<p class="cost">
 				310 &#8381 
-				<span class="kg">/кг</span>
+				<span class="measurement">/кг</span>
 			</p>
 			<div class="product-description">
 				<p>	Сливочное с апельсиновым
@@ -67,12 +80,12 @@
 				</p>
 			</div>
 		</div>
-		<div class="product-2">
+		<div class="product-item">
 		  <p class="hit">ХИТ</p>
 		  <img src="./img/product-2.png" alt="Мороженое сливочно-кофейное">
 			<p class="cost">
 				390 &#8381 
-				<span class="kg">/кг</span>
+				<span class="measurement">/кг</span>
 			</p>
 			<div class="product-description">
 				<p>	Сливочно-кофейное с кусочками
@@ -80,12 +93,12 @@
 				</p>
 			</div>
 		</div>
-		<div class="product-3">
+		<div class="product-item">
 		  <p class="hit">ХИТ</p>
 		  <img src="./img/product-3.png" alt="Мороженое сливочно-клубничное">
 			<p class="cost">
 				355 &#8381 
-				<span class="kg">/кг</span>
+				<span class="measurement">/кг</span>
 			</p>
 			<div class="product-description">
 				<p>	Сливочно-клубничное с
@@ -93,12 +106,12 @@
 				</p>
 			</div>
 		</div>
-		<div class="product-4">
+		<div class="product-item">
 		  <p class="hit">ХИТ</p>
 		  <img src="./img/product-4.png" alt="Мороженое сливочное крем-брюле">
 			<p class="cost">
 				415 &#8381 
-				<span class="kg">/кг</span>
+				<span class="measurement">/кг</span>
 			</p>
 			<div class="product-description">
 				<p>	Сливочное крем-брюле с
@@ -110,27 +123,27 @@
 	  <section class="store">
 	    <h3 class="store-gllacy"> Магазин Глейси - это онлайн- и офлайн- магазин по продаже мороженного собственного <br>
 			производства на разнавес </h3>
-		<div class="store-item">
-		  <div class="store-item-1 item">
+		<div class="store-items">
+		  <div class="store-item">
 			<p> Все наше мороженное изготавливается на собственном
 				производстве, с использованием современного оборудования
 				и проверенных временем технологий.
 			</p>
 		  </div>
-		  <div class="store-item-2 item">
+		  <div class="store-item">
 			<p> Закупка ингридиентов производится только у проверенных
 				фермерских хозяйств и компаний, с которыми нас связывает
 				долговременное сотрудничество.
 			</p>
 		  </div>
-		  <div class="store-item-3 item">
+		  <div class="store-item">
 			<p> Для приготовления мороженного используются настоящие
 				сливки и молоко высочайшего качества. Все дополнительные
 				ингридиенты и добавки произведены из натурального,
 				экологически чистого сырья.
 			</p>
 		  </div>
-		  <div class="store-item-4 item">
+		  <div class="store-item">
 			<p> Все наше мороженное изготавливается на  собственном
 				производстве, с использованием современного оборудования
 				и проверенных временем технологий.
@@ -152,10 +165,10 @@
 			всего самого вкусного, что у нас происходит. Обещаем не спамить
 			и не слать ненужной ерунды. Честно =)
 		</p>
-		<div class="send">
-			<input type="text">
+		<form action="send.php">
+			<input type="text" placeholder="Электронная почта">
 			<a class="button" href="#">Отправить!</a>
-		</div>
+		</form>
 	  </section>
 	  <footer>
 	    <div class="footer-social">
