@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<title>Gllacy</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
@@ -13,51 +15,69 @@
 	    <img src="./img/Logo.png" width="155" height="70" alt="Логотип Глейси">
 	  </a>
 	  <ul class="site-navigation">
-	    <li><a href="catalog.html">Каталог</a></li>
+	    <li class="active"><a class="active-hover" href="catalog.html">Каталог</a>
 <!-- Добавляю выпадающее подменю -->
 	      <ul class="sub-menu-hidden">
-	  		<li><a class="highlighted" href="#">Новинки</a></li>
+	  		<li class="highlighted"><a class="highlighted-active" href="#">Новинки</a></li>
 			<li><a href="#">Сливочное</a></li>
 			<li><a href="#">Щербеты</a></li>
 			<li><a href="#">Фруктовый лед</a></li>
 			<li><a href="#">Мелорин</a></li>
 	  	  </ul>
+	  	</li>
 <!-- Подменю добавлено-->
 		<li><a href="pay.html">Доставка и оплата</a></li>
 		<li><a href="about_company.html">О Компании</a></li>
 	  </ul>
 	  <ul class="user-navigation">
-	    <li class="search"></li>
+	    <li class="search">
 <!-- Добавляю поле поиска -->
 	      <div class="search-hidden">
 	      	<input type="text" placeholder="Что ищем?">
 	      </div>
+	    </li>
 <!-- Поле поиска добавлено-->
-		<li class="login-link">Вход</li>
+		<li class="login-link">Вход
 <!-- Добавляю поле ввода -->
 	  <div class="login-link-hidden">
         <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
             <p>
-                <label class="user-login-hidden" for="user-login">Логин</label>
-                <input class="login-user" id="user-login" type="text" name="login" placeholder="Логин">
+                <label class="user-email-hidden" for="email-login">Логин</label>
+                <input class="email-user" id="email-login" type="text" name="email" placeholder="Электронная почта">
             </p>
             <p>
                 <label class="user-password-hidden" for="user-password">Пароль</label>
                 <input class="login-password" id="user-password" type="password" name="password" placeholder="Пароль">
             </p>
-            <button class="button" type="submit">Войти</button>
-            <p class="login-info">
-              <a class="restore" href="#">Забыли пароль?</a>
-              <a class="new_registration" href="#">Новая регистрация</a>
-            </p>
+            <div class="login-info">
+              <button class="button" type="submit">Войти</button>
+              <div class="login-info-description">
+                <a class="restore" href="#">Забыли пароль?</a>
+                <a class="new_registration" href="#">Новая регистрация</a>
+            </div>
+            </div>
         </form>
       </div>
+     </li>
 <!-- Поле ввода добавлено-->
-		<li class="basket">Пусто</li>
+		<li class="cart">Пусто</li>
 	  </ul>
 	</nav>
+	<div class="contact">
+	  <p class="working_hours">
+	    С 10 до 20, ежедневно
+	  </p>
+	  <p class="telephone">
+	    8 812 450 25 25
+	  </p>
+	  
   </header>
-  <main class="container">
+<main class="container">
+<!-- Контакты --><!-- Решил стилизовать контакты через position: position: absolute -->
+<!--  	<div class="contact"> 
+<span class="telephone">8 812 450 25 25</span> -->
+	  
+<!--	  </div> -->
 <!-- Слайдер (3 слайда) -->
   	  <section class="slider">
 		<ul class="slider-slides">
@@ -85,37 +105,32 @@
 		<input type="radio" id="slide-3">
   	  </section>
 <!-- Слайдер завершен -->
-	  <div class="contact">
-	  <p>
-	    С 10 до 20, ежедневно
-		<span class="telephone">8 812 450 25 25</span>
-	  </p>
-	  </div>
+<!-- Малинки и шоколадки даром -->
 	  <section class="features">
 	    <h2 class="visually-hidden"></h2>
-		<ul class="feature-list">
-		  <li class="feature-item">
+		<div class="feature-list">
+		  <div class="feature-item raspberry">
 		    <h3>Малинка даром!</h3>
 			<p>
-				При покупке 2кг любого фруктового мороженого, добавим
-				в ваш заказ банку малинового варенья бесплатно.
+				При покупке 2кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
 			</p>
 			<a class="button button-raspberry" href="order.html">Хочу варенье!</a>
-		  </li>
-		  <li class="feature-item">
+		  </div>
+		  <div class="feature-item chocolate">
 		    <h3>Шоколадки даром!</h3>
 			<p>
-				При покупке 2кг пломбира, добавим в ваш заказ упаковку
-				вкуснейшей шоколадной присыпки совершенно бесплатно.
+				При покупке 2кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
 			</p>
 			<a class="button button-chocolate" href="order.html">Хочу варенье!</a>
-		  </li>
-		</ul>
+		  </div>
+		</div>
 	  </section>
+<!-- Малинки и шоколадки даром закончились-->
+<!-- Блок с мороженками -->
 	  <section class="product">
 	    <div class="product-item">
 		  <p class="hit">ХИТ</p>
-		  <img src="./img/1.jpg" width="267" height="270" alt="Мороженое сливочное с апельсиновым джемом">
+		  <img src="./img/1.png" width="267" height="270" alt="Мороженое сливочное с апельсиновым джемом">
 			<p class="cost">
 				310 &#8381 
 				<span class="measurement">/кг</span>
@@ -128,7 +143,7 @@
 		</div>
 		<div class="product-item">
 		  <p class="hit">ХИТ</p>
-		  <img src="./img/2.jpg" width="267" height="270" alt="Мороженое сливочно-кофейное">
+		  <img src="./img/2.png" width="267" height="270" alt="Мороженое сливочно-кофейное">
 			<p class="cost">
 				390 &#8381 
 				<span class="measurement">/кг</span>
@@ -141,7 +156,7 @@
 		</div>
 		<div class="product-item">
 		  <p class="hit">ХИТ</p>
-		  <img src="./img/3.jpg" width="267" height="270" alt="Мороженое сливочно-клубничное">
+		  <img src="./img/3.png" width="267" height="270" alt="Мороженое сливочно-клубничное">
 			<p class="cost">
 				355 &#8381 
 				<span class="measurement">/кг</span>
@@ -154,7 +169,7 @@
 		</div>
 		<div class="product-item">
 		  <p class="hit">ХИТ</p>
-		  <img src="./img/4.jpg" width="267" height="270" alt="Мороженое сливочное крем-брюле">
+		  <img src="./img/4.png" width="267" height="270" alt="Мороженое сливочное крем-брюле">
 			<p class="cost">
 				415 &#8381 
 				<span class="measurement">/кг</span>
@@ -166,37 +181,41 @@
 			</div>
 		</div>
 	  </section>
+<!-- Магазин Глейси -->
 	  <section class="store">
 	    <h3 class="store-gllacy"> Магазин Глейси - это онлайн- и офлайн- магазин по продаже мороженного собственного <br>
-			производства на разнавес </h3>
+			производства на развес </h3>
 		<div class="store-items">
-		  <div class="store-item">
+		  <div class="store-item ice_cream">
 			<p> Все наше мороженное изготавливается на собственном
 				производстве, с использованием современного оборудования
 				и проверенных временем технологий.
 			</p>
 		  </div>
-		  <div class="store-item">
+		  <div class="store-item cow">
 			<p> Закупка ингридиентов производится только у проверенных
 				фермерских хозяйств и компаний, с которыми нас связывает
 				долговременное сотрудничество.
 			</p>
 		  </div>
-		  <div class="store-item">
+		  <div class="store-item sheet">
 			<p> Для приготовления мороженного используются настоящие
 				сливки и молоко высочайшего качества. Все дополнительные
 				ингридиенты и добавки произведены из натурального,
 				экологически чистого сырья.
 			</p>
 		  </div>
-		  <div class="store-item">
-			<p> Все наше мороженное изготавливается на  собственном
-				производстве, с использованием современного оборудования
-				и проверенных временем технологий.
+		  <div class="store-item thermometer">
+			<p> Доставка нашего мороженого до заказчиков
+				осуществляется в специальном термопаке,
+				который не дает мороженому растаять в пути
+				и позволяет сохранить превосходный вкус.
 			</p>
 		  </div>
 		</div>
 	  </section>
+<!-- 2 блока: методы сервировки и почта -->
+	  <div class="blog-post">
 	  <article class="blog">
 		<p class="new">Новое в нашем блоге</p>
 		<h3 class="serv"> 
@@ -213,13 +232,16 @@
 		</p>
 		<form action="send.php">
 			<input type="text" placeholder="Электронная почта">
-			<a class="button" href="#">Отправить!</a>
+			<a class="button send-button" href="#">Отправить!</a>
 		</form>
 	  </section>
+	</div>
+<!-- Добавляю карту -->
 	  <section class="map">
 	  	<iframe src="https://yandex.ru/map-widget/v1/-/CBFBEMBXtD" width="100%" height="430" frameborder="1" allowfullscreen="true">
-	  	</iframe>
+	  	</iframe> 
 	  </section>
+	 
 <!-- Добавляю попап -->
 	  <section class="map-form-hidden">
         <h2>Мы обязательно вам ответим!</h2>
