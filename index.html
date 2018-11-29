@@ -4,9 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Gllacy</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/normalize.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="main-header">
@@ -240,6 +240,26 @@
 	  <section class="map">
 	  	<iframe src="https://yandex.ru/map-widget/v1/-/CBFBEMBXtD" width="100%" height="430" frameborder="1" allowfullscreen="true">
 	  	</iframe> 
+	  	<div class="feedback">
+	  	<p class="addres">
+	  		Адрес главного офиса
+	  		и офлайн-магазина:
+	  	</p>
+	  	<div class="addres-office">
+	  		ул. Большая Конюшенная
+	  		19/8, Санкт-Петербург
+	  	</div>
+	  	<div class="order">
+	  	  <p class="order-description">
+	  		Для заказов по телефону:
+	  	  </p>
+	  		<span class="order-telephone">8 812 450 25 25</span>
+	  		<p class="order-working_hours">
+	  		  (с 10 до 20 ежедневно)
+	  		</p>
+	  	</div>
+	  	<a class="button button-feedback" href="order.html">Форма обратной связи</a>
+	  </div>
 	  </section>
 	 
 <!-- Добавляю попап -->
@@ -263,42 +283,25 @@
         </form>
     </section>
 <!-- Попап добавлен -->
-	  <div class="feedback">
-	  	<p>
-	  		Адрес главного офиса
-	  		и офлайн-магазина:
-	  	</p>
-	  	<div class="addres">
-	  		ул. Большая Конюшенная
-	  		19/8, Санкт-Петербург
-	  	</div>
-	  	<p>
-	  		Для заказов по телефону:
-	  		<span class="telephone">8 812 450 25 25</span>
-	  		(с 10 до 20 ежедневно)
-	  	</p>
-	  	<a class="button button-feedback" href="order.html">Форма обратной связи</a>
-	  </div>
+	  
 	  <footer>
-	    <div class="footer-social">
-		  <ul>
-		    <li><a class="footer-social-twitter" href="#">Твиттер</a></li>
-			<li><a class="footer-social-inst" href="#">Инстаграмм</a></li>
-			<li><a class="footer-social-fb" href="#">Фейсбук</a></li>
-			<li><a class="footer-social-vk" href="#">Вконтакте</a></li>
+		  <ul class="footer-social">
+		    <li class="footer-social-twitter"><a class="icon" href="#">Твиттер</a></li>
+			<li class="footer-social-inst"><a class="icon" href="#">Инстаграмм</a></li>
+			<li class="footer-social-fb"><a class= "icon" href="#">Фейсбук</a></li>
+			<li class="footer-social-vk"><a class="icon" href="#">Вконтакте</a></li>
 		  </ul>
-		</div>
 		<nav class="footer-menu">
 		  <ul>
-		    <li><a class="footer-menu-supply">Для поставщиков</a></li>
-			<li><a class="footer-menu-production">О производстве</a></li>
-			<li><a class="footer-menu-documents">Наши документы</a></li>
-			<li><a class="footer-menu-ecology">Экологические стандарты</a></li>
+		    <li><a class="footer-menu-item supply">Для поставщиков</a></li>
+			<li><a class="footer-menu-item production">О производстве</a></li>
+			<li><a class="footer-menu-item documents">Наши документы</a></li>
+			<li><a class="footer-menu-item ecology">Экологические стандарты</a></li>
 		  </ul>
 		</nav>
 		<div class="footer-htmlacademy">
-		  <img src="./img/logo-htmlacademy-small.png" alt="ЛоготиSп HtmlAcademy">
-		  <p class="footer-description">Сделано в <a class="footer-htmlacademy-text" href="htmlacademy.ru">HTML Academy</a> &#169 2017</p>
+		  <img src="./img/logo-htmlacademy-small.png" width="110" height="40" alt="ЛоготиSп HtmlAcademy">
+		  <p class="footer-description">Сделано в <a class="footer-htmlacademy-text" href="https://htmlacademy.ru/">HTML Academy</a> &#169 2017</p>
 		</div>
 	  </footer>
 	</main>
