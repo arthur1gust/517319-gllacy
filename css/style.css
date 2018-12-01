@@ -52,30 +52,53 @@ h1 {
 }
 .main-navigation {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-wrap: nowrap;
 	width: 100%;
-	margin: 10px 20px 0px 20px;
+	margin: 9px 0px 0px 27px;
 }
 .site-navigation {
 	display: flex;
-	justify-content: space-between;
-	margin-right: 200px;
+	justify-content: flex-start;
+	margin-left: -13px;
+	outline: 1px solid black;
+	width: 350px;
+	height: 45px;
 }
-.site-navigation li, 
+.active {
+	width: 88px;
+	display: block;
+}
+.pay a {
+	width: 143px;
+	display: block;
+	outline: 1px solid black;
+}
+.about_company a {
+	width: 92px;
+	display: block;
+}
+.site-navigation li {
+	list-style: none;
+	margin-top: 10px;
+}
 .user-navigation li {
 	list-style: none;
+	margin-top: 5px;
 }
 .site-navigation a {
-	margin-right: 25px;
+	margin: 0;
+	padding: 0;
+	margin-right: 28px;
+
 	color: #ffffff;
 	text-decoration: none;
-	border-bottom: 1px dashed #ffffff;
-	//width: 70px;
+	border-bottom: 1px solid #9fb4a9;
 }
 .sub-menu-hidden {
 	display: none;
 }
+/*
 .active:hover {
 	position: relative;
 	width: 70px;
@@ -85,10 +108,29 @@ h1 {
 	padding-left: 10px;
 	padding-top: 10px;
 }
+*/
+.active-hover {
+display: block;
+}
 .active-hover:hover {
 	color: black;
 	font-weight: 700;
 	border-bottom: none;
+	width: 70px;
+	height: 34px;
+	background-color: #ffffff;
+	display: flex;
+	border-radius: 20px;
+	background-repeat: no-repeat;
+	
+display: block;
+background-size: 100px 50px;
+
+	//line-height: 20px;
+	//vertical-align: middle;
+	//text-align: center;
+	//background-position:  100% 100%;
+
 	
 }
 .active:hover .sub-menu-hidden {
@@ -103,6 +145,8 @@ h1 {
 	font-weight: 700;
 	color: black;
 }
+
+
 .sub-menu-hidden {
 	width: 146px;
 	height: 162px;
@@ -126,7 +170,10 @@ h1 {
 .user-navigation {
 	display: flex;
 	justify-content: space-between;
-	//margin-right: 20px;
+	margin: 0;
+	padding: 0;
+	margin-left: 329px;
+	margin-top: 10px;
 }
 .user-navigation li {
 	margin-right: 10px;
@@ -354,12 +401,13 @@ h1 {
 .hit {
 	width: 62px;
 	height: 62px;
-	background-color: white;
-	border-radius: 50%;
-	line-height: 60px;
+	//background-color: white;
+	//border-radius: 50%;
+	//line-height: 60px;
+	background-image: url("../img/Хит.png");
 	position: absolute;
-	text-align: center;
-	font-size: 28px;
+	//text-align: center;
+	//font-size: 28px;
 }
 
 .cost {
@@ -501,11 +549,10 @@ form input[type="text"] {
 	//border-right: 10px;
 }
 /* Карта */
-
 .map {
-	margin-top: 40px;
+	margin-top: 50px;
 	width: 1200px;
-	height: 330px;
+	height: 432px;
 	background-image: url("../img/карта.jpg");
 	position: relative;
 }
@@ -518,7 +565,7 @@ form input[type="text"] {
 	background-color: #ffffff;
 	width: 304px;
 	height: 306px;
-	top: 50px;
+	top: 40px;
 	right: 50px;
 	border-radius: 10px;
 }
@@ -568,10 +615,13 @@ form input[type="text"] {
 	font-size: 16px;
 }
 footer {
-	margin-top: 120px;
+	margin: 0;
+	padding: 0;
+	margin-top: 100px;
 	height: 104px;
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 30px;
 }
 .footer-social {
 	display: flex;
