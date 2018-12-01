@@ -104,56 +104,53 @@
 <!-- Убойный блок) -->
 	<section class="filter">
 	  <h1>Сливочное мороженое</h1>
-	  <div class="row-1">
+	  <div class="filter-item">
 	  	<div class="sort">
-          <label for="vary">Сортировка</label>
+          <label for="vary">Сортировка:</label>
             <select name="vary">
               <option value="По популярности">По популярности</option>
             </select>
         </div>
         <div class="range">
-          <legend>Цена: 100 руб. - 500 руб.</legend>
+          <legend class="range-legend">Цена: 100 руб. - 500 руб.</legend>
           <div class="value">
-        	<div class="line"></div>
+        	<div class="line-catalog"></div>
           </div>
             <div class="circle-left"></div>
         	<div class="circle-right"></div>
         </div>
-        <div class="fat_content">
-          <legend>Жирность:</legend>
-          <div class="circle_0%">
-        	<div class="0%"></div>
+        <div class="circle">
+          <legend class="circle-legend">Жирность:</legend>
+          <div class="filter-circle">
+          <div class="circle_0">
         	<p>0%</p>
           </div>
-          <div class="circle_10%">
-        	<div class="10%"></div>
+          <div class="circle_10">
         	<p>до 10%</p>
           </div>
-          <div class="circle_before_30%">
-        	<div class="before_30%"></div>
+          <div class="circle_before_30">
         	<p>до 30%</p>
           </div>
-        	<div class="circle_over_30%">
-        	  <div class="over_30%"></div>
+        	<div class="circle_over_30">
         	  <p>выше 30%</p>
         	</div>
+          </div>
         </div>
 	  </div>
-	  <div class="row-2">
-	  	<legend>Наполнители:</legend>
+	  <div class="filter-item">
+	  	<legend class="filter-legend">Наполнители:</legend>
 	  	<div class="filler">
-	  	  <div class="check"></div>
-	  	  <p class="filler-description">шоколадные</p>
-	  	  <div class="check"></div>
-	  	  <p class="filler-description">сахарные присыпки</p>
-	  	  <div class="no-check"></div>
-	  	  <p class="filler-description">фрукты</p>
-	  	  <div class="no-check"></div>
-	  	  <p class="filler-description">сиропы</p>
-	  	  <div class="no-check"></div>
-	  	  <p class="filler-description">джемы</p>
+	  	  <p class="filler-description-cheked">шоколадные</p>
+
+	  	  <p class="filler-description-cheked">сахарные присыпки</p>
+
+	  	  <p class="filler-description-no_cheked">фрукты</p>
+
+	  	  <p class="filler-description-no_cheked">сиропы</p>
+
+	  	  <p class="filler-description-no_cheked">джемы</p>
 	  	</div>
-	  	<button>Применить</button>
+	  	<button class="button-filter">Применить</button>
 	  </div>
 	</section>
 <!-- Мой любимый блок закончился -->

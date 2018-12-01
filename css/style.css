@@ -808,17 +808,22 @@ footer {
 	margin-top: 10px;
 }
 
-.row-1 {
-	display: flex;
-	justify-content: flex-start;
-}
-.row-2 {
+.filter-item {
 	display: flex;
 	justify-content: flex-start;
 }
 .filler {
 	display: flex;
 	justify-content: flex-start;
+}
+.sort label {
+    display: block;
+    margin-top: 35px;
+    margin-bottom: 5px;
+    margin-left: 45px;
+    width: 200px;
+    color: #ffffff;
+    font-size: 14px;
 }
 select {
 	width: 192px;
@@ -828,6 +833,7 @@ select {
   	background-color: #a9b9af;
   	border-radius: 20px;
   	color: #ffffff;
+  	margin-left: 27px;
 
 	-webkit-appearance: none; 
     -moz-appearance: none;
@@ -840,10 +846,153 @@ select {
 select::-ms-expand { 
     display: none; /* Для браузера ie10 и ie11 */
 }
-.sort label {
-	width: 200px;
-}
+.range-legend{
+	
+	display: block;
+	margin-left: 15px;
+	color: #ffffff;
+	font-size: 14px;
+	margin-top: 35px;
 
+}
+.value {
+	width: 220px;
+	height: 36px;
+	font-size: 16px;
+	background-color: #a9b9af;
+	border-radius: 20px;
+  	color: #ffffff;
+  	display: inline-block;
+  	margin-top: 5px;
+}
+.line-catalog {
+	width: 178px;
+	height: 2px;
+	background-color: #d1dad3;
+	margin-left: 23px;
+	margin-top: 17px;
+	display: block;
+}
+.circle-left {
+
+}
+.circle-right {
+	
+}
+.circle-legend {
+	margin-top: 35px;
+	display: block;
+	margin-left: 25px;
+	color: #ffffff;
+	font-size: 14px;
+}
+.filter-circle {
+	display: flex;
+	justify-content: flex-start;
+	width: 416px;
+	height: 36px;
+	font-size: 16px;
+	background-color: #a9b9af;
+	border-radius: 20px;
+  	color: #ffffff;
+  	margin-top: 5px;
+  	margin-left: 15px;
+  	line-height: 5px;
+
+}
+.circle_0 {
+	margin-left: 10px;
+	display: flex;
+}
+.circle_0::before {
+	content: url("../img/svg/radio-off.svg"); 
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.circle_10 {
+	margin-left: 18px;
+	display: flex;
+}
+.circle_10::before {
+	content: url("../img/svg/radio-on.svg"); 
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.circle_before_30 {
+	margin-left: 18px;
+	display: flex;
+}
+.circle_before_30::before {
+	content: url("../img/svg/radio-off.svg"); 
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.circle_over_30 {
+	margin-left: 18px;
+	display: flex;
+}
+.circle_over_30::before {
+	content: url("../img/svg/radio-off.svg"); 
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.filter-legend {
+	margin: 0;
+	padding: 0;
+	margin-top: 20px;
+	display: block;
+	margin-left: 40px;
+	color: #ffffff;
+	font-size: 14px;
+}
+.filler {
+	display: flex;
+	justify-content: flex-start;
+	width: 702px;
+	height: 36px;
+	font-size: 16px;
+	background-color: #a9b9af;
+	border-radius: 20px;
+  	color: #ffffff;
+  	margin-top: 45px;
+  	margin-left: -105px;
+  	line-height: 5px;
+}
+.filler-description-cheked {
+	margin-left: 15px;
+	margin-right: 10px;
+	display: flex;
+	line-height: 2px;
+}
+.filler-description-cheked::before {
+	content: url("../img/svg/checkbox-on.svg"); 
+	margin-top: -10px;
+	margin-right: 5px;
+}
+.filler-description-cheked:nth-child(2) {
+	width: 188px;
+}
+.filler-description-no_cheked {
+	margin-left: 15px;
+	margin-right: 10px;
+	display: flex;
+	line-height: 2px;
+}
+.filler-description-no_cheked::before {
+	content: url("../img/svg/checkbox-off.svg"); 
+	margin-top: -10px;
+	margin-right: 5px;
+}
+.button-filter {
+	margin-top: 45px;
+	margin-left: 15px;
+	width: 148px;
+	height: 36px;
+	border: 1px solid #fcfcfc;
+	border-radius: 50px;
+	color: #ffffff;
+	background-color: #a6b7ae;
+}
 /* Не понимаю почему .product не срабатывает и его приходится дублировать, хотя этот кусок кода уже был ранее */
 .product {
 	display: flex;
@@ -873,13 +1022,13 @@ select::-ms-expand {
 /* Пока ничего хитрее не придумал, как опять привязать названия
 классов к номерам рядов */
 .cost-catalog-row_1 {
-	bottom: 225px;
+	bottom: 280px;
 }
 .cost-catalog-row_2 {
-	bottom: -125px;
+	bottom: -75px;
 }
 .cost-catalog-row_3 {
-	bottom: -470px;
+	bottom: -420px;
 }
 .pagination {
 	display: flex;
