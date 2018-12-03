@@ -245,6 +245,8 @@ li.active:hover .sub-menu-hidden {
 	margin-top: 20px;
 	margin-left: 20px;
 	color: #b4b4b4;
+	//color: #000000;
+	//font-weight: bold;
 	padding-left: 15px;
 }
 .search-hidden input:hover {
@@ -257,6 +259,7 @@ li.active:hover .sub-menu-hidden {
 	outline:0;
 	border: 2px solid #8fbdec;
 	border-radius: 10px;
+	font-weight: 700;
 }
 .user-navigation {
 	margin-right: 50px;
@@ -326,6 +329,7 @@ li.active:hover .sub-menu-hidden {
 	outline: 0;
 	border: 2px solid #8fbdec;
 	border-radius: 10px;
+	font-weight: 700;
 }
 .login-info {
 	display: flex;
@@ -628,6 +632,7 @@ li.active:hover .sub-menu-hidden {
 	outline:0;
 	border: 2px solid #8fbdec;
 	border-radius: 10px;
+	font-weight: 700;
 }
 /*
 form input[type="text"] {
