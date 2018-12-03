@@ -121,8 +121,12 @@ li.about_company:hover .about_company-hover {
 	text-decoration: none;
 	font-weight: 700;
 }
-.active-hover:visited li.active {
+.active:active {
 	background-color: #d07058;
+	box-shadow: 0 2px 2px #575555 inset;
+}
+.active:visited  {
+	 background-color: #d07058;
 }
 .sub-menu-hidden {
 	display: none;
@@ -158,7 +162,7 @@ li.active:hover .sub-menu-hidden {
 	height: 30px;
 	text-align: left;
 	text-indent: 20px;
-	line-height: 30px;
+	line-height: 25px;
 		 
 }
 
@@ -1048,14 +1052,16 @@ select {
 select::-ms-expand { 
     display: none; /* Для браузера ie10 и ie11 */
 }
+select:hover {
+	color: #000000;
+	background-image: url("../img/svg/icon-down-dir.svg");
+}
 .range-legend{
-	
 	display: block;
 	margin-left: 15px;
 	color: #ffffff;
 	font-size: 14px;
 	margin-top: 35px;
-
 }
 .value {
 	width: 220px;
@@ -1105,17 +1111,27 @@ select::-ms-expand {
 .circle_0 {
 	margin-left: 10px;
 	display: flex;
+	width: 55px;
 }
 .circle_0::before {
-	content: url("../img/svg/radio-off.svg"); 
+	content: url("../img/radio-off-usually.png"); 
 	margin-top: 5px;
 	margin-right: 10px;
+}
+.circle_0:hover::before {
+	content: url("../img/svg/radio-off.svg"); 
 }
 .circle_10 {
 	margin-left: 18px;
 	display: flex;
+	width: 88px;
 }
 .circle_10::before {
+	content: url("../img/radio-on-usually.png"); 
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.circle_10:hover::before {
 	content: url("../img/svg/radio-on.svg"); 
 	margin-top: 5px;
 	margin-right: 10px;
@@ -1123,8 +1139,14 @@ select::-ms-expand {
 .circle_before_30 {
 	margin-left: 18px;
 	display: flex;
+	width: 88px;
 }
 .circle_before_30::before {
+	content: url("../img/radio-off-usually.png"); 
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.circle_before_30:hover::before {
 	content: url("../img/svg/radio-off.svg"); 
 	margin-top: 5px;
 	margin-right: 10px;
@@ -1132,8 +1154,14 @@ select::-ms-expand {
 .circle_over_30 {
 	margin-left: 18px;
 	display: flex;
+	width: 112px;
 }
 .circle_over_30::before {
+	content: url("../img/radio-off-usually.png"); 
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.circle_over_30:hover::before {
 	content: url("../img/svg/radio-off.svg"); 
 	margin-top: 5px;
 	margin-right: 10px;
@@ -1167,20 +1195,34 @@ select::-ms-expand {
 	line-height: 2px;
 }
 .filler-description-cheked::before {
-	content: url("../img/svg/checkbox-on.svg"); 
+	content: url("../img/checkbox-on-usually.png"); 
 	margin-top: -10px;
 	margin-right: 5px;
 }
+.filler-description-cheked:first-child {
+	width: 88px;
+}
 .filler-description-cheked:nth-child(2) {
 	width: 188px;
+}
+.filler-description-cheked:hover::before {
+	content: url("../img/svg/checkbox-on.svg"); 
+	margin-top: -10px;
+	margin-right: 5px;
 }
 .filler-description-no_cheked {
 	margin-left: 15px;
 	margin-right: 10px;
 	display: flex;
 	line-height: 2px;
+	width: 94px;
 }
 .filler-description-no_cheked::before {
+	content: url("../img/checkbox-off-usually.png"); 
+	margin-top: -10px;
+	margin-right: 5px;
+}
+.filler-description-no_cheked:hover::before {
 	content: url("../img/svg/checkbox-off.svg"); 
 	margin-top: -10px;
 	margin-right: 5px;
@@ -1188,13 +1230,28 @@ select::-ms-expand {
 .button-filter {
 	margin-top: 45px;
 	margin-left: 15px;
-	width: 148px;
-	height: 36px;
+	width: 144px;
+	height: 37px;
 	border: 1px solid #fcfcfc;
 	border-radius: 50px;
 	color: #ffffff;
 	background-color: #a6b7ae;
 }
+.button-filter:hover {
+	border: none;
+	outline: none;
+	color: #000000;
+	background-color: #ffffff;
+}
+.button-filter:active {
+	border: none;
+	outline: none;
+	color: #000000;
+	background-color: #ededed;
+	//box-shadow: inset 10px 2px 2px 3px rgba(105, 105, 105, 0);
+	box-shadow: 0 2px 2px #575555 inset; 
+}
+
 /* Не понимаю почему .product не срабатывает и его приходится дублировать, хотя этот кусок кода уже был ранее */
 .product {
 	display: flex;
