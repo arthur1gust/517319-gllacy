@@ -9,14 +9,22 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<!-- Инпуты для слайдера -->
+<input class="visually-hidden-slider" type="radio" id="product-1" name="toggle" checked>
+<input class="visually-hidden-slider" type="radio" id="product-2" name="toggle">
+<input class="visually-hidden-slider" type="radio" id="product-3" name="toggle">
+
+<div class="site-wrapper">
+	<!-- Инпуты закончились --> 
   <header class="main-header">
   	<nav class="main-navigation">
 	  <a class="main-navigation-logo">
 	    <img src="./img/Logo.png" width="155" height="70" alt="Логотип Глейси">
 	  </a>
 	  <ul class="site-navigation">
-	    <li class="active"><a class="active-hover" href="catalog.html">Каталог</a>
+	    <li class="active"><a class="active-hover" href="catalog.html">Каталог</a> 
 <!-- Добавляю выпадающее подменю -->
+
 	      <ul class="sub-menu-hidden">
 	  		<li class="highlighted"><a class="highlighted-active" href="#">Новинки</a></li>
 	  		<div class="line-sub-menu"></div>
@@ -73,38 +81,51 @@
 	  </p>
 	  
   </header>
-<main class="container">
+<main class="container"> 
 <!-- Контакты --><!-- Решил стилизовать контакты через position: position: absolute -->
-<!--  	<div class="contact"> 
-<span class="telephone">8 812 450 25 25</span> -->
-	  
-<!--	  </div> -->
-<!-- Слайдер (3 слайда) -->
-  	  <section class="slider">
-		<ul class="slider-slides">
-	  	  <li class="slider-item">
-	    	<h1 class="slider-title">
-		  	  Крем-брюле и пломбир с малиновым джемом
-	    	</h1>
-	    	<a class="button slider-button" href="#">Давайте оба!</a>	
-	  	  </li>
-	  	  <li class="slider-item">
-	    	<h1 class="slider-title">
-		  	  Шоколадный пломбир и лимонный сорбет
-	    	</h1>
-	    	<a class="button slider-button" href="#">Давайте оба!</a>	
-	  	  </li>
-	  	  <li class="slider-item">
-	    	<h1 class="slider-title">
-		  	  Пломбир с помадкой и клубничный щербет
-	    	</h1>
-	    	<a class="button slider-button" href="#">Давайте оба!</a>	
-	  	  </li>
-		</ul>
-		<input type="radio" id="slide-1" checked>
-		<input type="radio" id="slide-2">
-		<input type="radio" id="slide-3">
-  	  </section>
+ 	
+<!-- Слайдер -->
+	<div class="container1">
+		<div class="main-header">
+			<section class="slider">
+				<div class="slider-controls">
+					<label for="product-1">Первый</label>
+					<label for="product-2">Второй</label>
+					<label for="product-3">Третий</label>
+				</div>
+					<ul class="slider-list">
+						<li class="slider-item slide" id="slide1">
+							<h3 class="slide-title">
+								Крем-брюле и пломбир с малиновым джемом
+							</h3>
+							<a class="buttonS slide-button" href="#">Давайте оба!</a>
+							
+						</li>
+						<li class="slider-item slide" id="slide2">
+							<h3 class="slide-title">
+								Шоколадный пломбир и лимонный сорбет
+							</h3>
+							<a class="buttonS slide-button" href="#">Давайте оба!</a>
+						</li>
+						<li class="slider-item slide" id="slide3">
+							<h3 class="slide-title">
+								Пломбир с помадкой и клубничный щербет
+							</h3>
+							<a class="buttonS slide-button" href="#">Давайте оба!</a>
+						</li>
+					</ul>
+				
+			</section>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
 <!-- Слайдер завершен -->
 <!-- Малинки и шоколадки даром -->
 	  <section class="features">
@@ -181,10 +202,6 @@
 				</p>
 			</div>
 
-		</div>
-			
-		<div class="product-item-hover">
-			<a class="button" href="order.html">Хочу варенье!</a>
 		</div>
 	  </section>
 <!-- Магазин Глейси -->
@@ -311,6 +328,7 @@
 		</div>
 	  </footer>
 	</main>
+  </div>
 </body>
 </html>
 

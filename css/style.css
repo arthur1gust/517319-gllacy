@@ -27,12 +27,13 @@ h1 {
 .container {
 	width: 1200px;
 	margin: 0 auto;
-	outline: 1px solid black;
+	//outline: 1px solid black;
 }
 .button {
 	display: inline-block;
 	font-size: 20px;
 	height: 46px;
+	//margin-top: 20px;
 	background-color: #ef6341;
 	color: #ffffff;
 	text-decoration: none;
@@ -65,12 +66,10 @@ h1 {
 	width: 500px;
 	height: 45px;
 }
-
 .site-navigation li {
 	list-style: none;
 	//margin-top: 10px;
 }
-
 .user-navigation li {
 	list-style: none;
 	//margin-top: 5px;
@@ -108,7 +107,6 @@ li.about_company {
 	text-decoration: underline solid #adc4b7;
 	color: #ffffff;
 }
-
 li.active:hover,
 li.pay:hover,
 li.about_company:hover {
@@ -148,7 +146,6 @@ li.active:hover .sub-menu-hidden {
 	margin: 0;
 	padding: 0;
 }
-
 .sub-menu-hidden a {
 	margin: 0;
 	padding: 0;
@@ -162,10 +159,8 @@ li.active:hover .sub-menu-hidden {
 	height: 30px;
 	text-align: left;
 	text-indent: 20px;
-	line-height: 25px;
-		 
+	line-height: 25px;		 
 }
-
 .sub-menu-hidden .highlighted {
 	font-weight: 700;
 }
@@ -181,7 +176,6 @@ li.active:hover .sub-menu-hidden {
 	padding: 0;
 	margin-left: 10px;
 }
-
 .sub-menu-hidden a:hover {
 	background-color: #fbded7;
 	display: block;
@@ -194,7 +188,6 @@ li.active:hover .sub-menu-hidden {
 	background-color: #d07058;
 	display: block;
 }
-
 .user-navigation {
 	display: flex;
 	justify-content: space-between;
@@ -208,6 +201,7 @@ li.active:hover .sub-menu-hidden {
 	margin-top: 5px;
 }
 /* ЛУПА */
+
 .search {
 	background-image: url("../img/лупа2.png");
 	background-repeat: no-repeat;
@@ -225,6 +219,7 @@ li.active:hover .sub-menu-hidden {
 	background-color: #ffffff;
 }
 /* Выпадающее окно поиска */
+
 .search:hover .search-hidden {
 	display: block;
 	position: absolute;
@@ -233,9 +228,12 @@ li.active:hover .sub-menu-hidden {
 }
 .search-hidden {
 	background-color: #f8f7f4;
-	width: 344px;
+	width: 341px;
 	height: 84px;
-	border-radius: 10px;
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+	z-index: 6;
+	border-radius: 5px;
+	color: #323232;
 }
 .search-hidden input {
 	width: 304px;
@@ -249,8 +247,6 @@ li.active:hover .sub-menu-hidden {
 	margin-top: 20px;
 	margin-left: 20px;
 	color: #b4b4b4;
-	//color: #000000;
-	//font-weight: bold;
 	padding-left: 15px;
 }
 .search-hidden input:hover {
@@ -303,9 +299,12 @@ li.active:hover .sub-menu-hidden {
 }
 .login-link-hidden {
 	background-color: #f8f7f4;
-	width: 278px;
+	width: 277px;
 	height: 214px;
-	border-radius: 10px;
+	border-radius: 5px;
+	color: #323232;
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+	z-index: 5;
 }
 /* Как в input вводить жирный текст ? */
 .login-link-hidden input {
@@ -379,9 +378,6 @@ li.active:hover .sub-menu-hidden {
 	vertical-align: middle;
 }
 .contact {
-	//display: flex;
-	//justify-content: flex-end;
-	//flex-wrap: wrap;
 	width: 170px;
 	height: 80px;
 	text-align: right;
@@ -397,6 +393,142 @@ li.active:hover .sub-menu-hidden {
 .telephone {
 	font-size: 23px;
 }
+/* СЛАЙДЕР */
+.visually-hidden-slider {
+	position: absolute;
+	width: 1px
+	height: 1px;
+	clip: rect(0, 0, 0, 0);
+}
+.site-wrapper {
+	background-color: #849d8f;
+	background-image: url("../img/Слайд_1.png");
+	background-repeat: no-repeat;
+	background-position: 300px 0px;
+	min-height: 1000px;
+	transition: background-image 0.5s ease, background-color 0.5s ease; 
+ 	position: relative;
+  	width: 100%;
+  	overflow-y: hidden;
+}
+.site-wrapper::before,
+.site-wrapper::after {
+	content: "";
+	visibility: hidden;
+}
+.site-wrapper::before {
+	background-image: url("../img/Слайд_2.png");
+}
+.site-wrapper::after {
+	background-image: url("../img/Слайд_3.png");
+}
+.container1 {
+	width: 1140px;
+	padding: 0;
+	margin: 0 auto;
+}
+/*
+.main-header {
+	height: 100px;
+	background-color: rgba(0,0,0,0.4);
+}
+*/
+.slider {
+	position: relative;
+	padding-top: 321px;
+	text-align: center;
+	color: #ffffff;
+}
+.slider-item {
+	margin-top: -30px;
+	//border: 1px solid black;
+	height: 250px;
+}
+.slider-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.slide-title {
+	width: 700px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	font-size: 60px;
+	line-height: 60px;
+	font-weight: 700;
+}
+.slide-button {
+	display: inline-block;
+	margin-top: 30px;
+	padding: 12px 44px;
+	font-weight: 600;
+	font-size: 31px;
+	line-height: 41px;
+	text-align: center;
+	color: #ffffff;
+	vertical-align: top;
+	text-decoration: none;
+	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+	background: #f26843;
+	background: linear-gradient(to bottom, #f26843 0%, #e74a35 100% );
+	border-radius: 100px;
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+	border: none;
+	cursor: pointer;
+}
+.slide-button:hover {
+	background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100% );
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+.slide-button:active {
+	background: linear-gradient(to bottom, #d84732 0%, #e1613e 100% );
+	box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+.slider-controls label {
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	margin-right: 8px;
+	vertical-align: top;
+	background-color: transparent;
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.slider-controls {
+	position: absolute;
+	bottom: 35px;
+	left: 0;
+	z-index: 20;
+	font-size: 0;
+}
+.slide {
+	display: none;
+}
+#product-1:checked ~ .site-wrapper #slide1,
+#product-2:checked ~ .site-wrapper #slide2,
+#product-3:checked ~ .site-wrapper #slide3 {
+	display: block;
+}
+#product-1:checked ~ .site-wrapper label[for="product-1"],
+#product-2:checked ~ .site-wrapper label[for="product-2"],
+#product-3:checked ~ .site-wrapper label[for="product-3"] {
+	background-color: #ffffff;
+}
+#product-1:checked ~ .site-wrapper {
+	background-color: #849d8f;
+	background-image: url("../img/Слайд_1.png");
+}
+#product-2:checked ~ .site-wrapper {
+	background-color: #8996a6;
+	background-image: url("../img/Слайд_2.png");
+}
+#product-3:checked ~ .site-wrapper {
+	background-color: #9d8b84;
+	background-image: url("../img/Слайд_3.png");
+}
+/* --------------------------- */
 .feature-list {
 	display: flex;
 	justify-content: space-between;
@@ -428,7 +560,6 @@ li.active:hover .sub-menu-hidden {
 	width: 165px;
 	margin-left: 375px;
 	margin-top: 25px;
-	
 }
 .button-chocolate {
 	width: 190px;
@@ -458,32 +589,14 @@ li.active:hover .sub-menu-hidden {
 .product-item:last-child {
 	margin-right: 20px;
 }
-.product-item:hover {
-	display: block;
-	color: #ffffff;
-	box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0);
-	width: 273px;    /* -15-15 padding*/
-	height: 400px;   /* -5 padding*/
-	background-color: #9bafa3;
-	//background-color: rgb(248, 247, 244);
-	//box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-	//opacity: 1;
-	border-radius: 5px;
-	padding: 10px;
-}
 .product-item-hover {
 	display: none;
 }
 .hit {
 	width: 62px;
 	height: 62px;
-	//background-color: white;
-	//border-radius: 50%;
-	//line-height: 60px;
 	background-image: url("../img/Хит.png");
 	position: absolute;
-	//text-align: center;
-	//font-size: 28px;
 }
 .cost {
 	font-size: 34px;
@@ -511,8 +624,6 @@ li.active:hover .sub-menu-hidden {
 
 /* Магазин Глейси */
 
-
-
 .store {
 	background-image: url("../img/Вафельный_фон.jpg");
 	height: 310px;
@@ -530,9 +641,6 @@ li.active:hover .sub-menu-hidden {
 	line-height: 25px;
 	margin-left: 20px;
 	margin-top: 20px;
-	//display: block;
-	//width: 560px;
-	//display: inline-block;
 }
 .store-items {
 	display: flex;
@@ -540,7 +648,6 @@ li.active:hover .sub-menu-hidden {
 	flex-wrap: wrap;
 	margin-left: 20px;
 	margin-right: 20px;
-	//margin-top: 15px;
 }
 .store-item {
 	width: 560px;
@@ -638,13 +745,6 @@ li.active:hover .sub-menu-hidden {
 	border-radius: 10px;
 	font-weight: 700;
 }
-/*
-form input[type="text"] {
-	width: 368px;
-	height: 45px;
-	margin-top: 20px;
-	//border-right: 10px;
-} */
 /* Карта */
 .map {
 	margin-top: 50px;
@@ -725,12 +825,6 @@ form input[type="text"] {
 	right: 50px;
 	border-radius: 10px;
 }
-/*
-.feedback p {
-	display: inline-block;
-	margin-left: 25px;
-	margin-top: 35px;
-} */ 
 .addres {
 	margin-left: 25px;
 	margin-top: 32px;
@@ -746,17 +840,11 @@ form input[type="text"] {
 	line-height: 10px;
 }
 .order-description {
-	//margin-top: 20px;
 	margin-left: 25px;
 	font-size: 14px;
-	//text-align: left;
-	//width: 180px;
-	//line-height: 5px;
-	//display: block;
 }
 .order-telephone {
 	font-size: 16px;
-	//width: 100px;
 	font-weight: 700;
 	margin-left: 25px;
 }
@@ -786,7 +874,6 @@ footer {
 	height: 100px;
 	list-style: none;
 	margin-top: 30px;
-	//margin-left: 25px;
 }
 .icon {
 	display: none;
@@ -815,24 +902,17 @@ footer {
 	width: 38px;
 	height: 38px;
 }
-
-
 .footer-menu ul {
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
 	width: 400px;
-	//height: 100px;
 	text-align: left;
 	margin-top: 20px;
-	
-
-	
 }
 .footer-menu li {
 	list-style: none;
 	text-decoration: none;
-
 }
 .footer-menu a {
 	line-height: 10px;
@@ -1013,7 +1093,6 @@ footer {
 	margin-left: 25px;
 	margin-top: 10px;
 }
-
 .filter-item {
 	display: flex;
 	justify-content: flex-start;
@@ -1047,7 +1126,6 @@ select {
     background-image: url("../img/icon-down-dir.png"); 
     background-repeat: no-repeat;
     background-position: 170px;
-
 }
 select::-ms-expand { 
     display: none; /* Для браузера ie10 и ie11 */
