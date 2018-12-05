@@ -85,40 +85,37 @@
 <!-- Контакты --><!-- Решил стилизовать контакты через position: position: absolute -->
  	
 <!-- Слайдер -->
-	<div class="container1">
-		<div class="main-header">
-			<section class="slider">
-				<div class="slider-controls">
-					<label for="product-1">Первый</label>
-					<label for="product-2">Второй</label>
-					<label for="product-3">Третий</label>
-				</div>
-					<ul class="slider-list">
-						<li class="slider-item slide" id="slide1">
-							<h3 class="slide-title">
-								Крем-брюле и пломбир с малиновым джемом
-							</h3>
-							<a class="buttonS slide-button" href="#">Давайте оба!</a>
-							
-						</li>
-						<li class="slider-item slide" id="slide2">
-							<h3 class="slide-title">
-								Шоколадный пломбир и лимонный сорбет
-							</h3>
-							<a class="buttonS slide-button" href="#">Давайте оба!</a>
-						</li>
-						<li class="slider-item slide" id="slide3">
-							<h3 class="slide-title">
-								Пломбир с помадкой и клубничный щербет
-							</h3>
-							<a class="buttonS slide-button" href="#">Давайте оба!</a>
-						</li>
-					</ul>
-				
-			</section>
+  <div class="container-slider">
+	<div class="main-header">
+	  <section class="slider">
+		<div class="slider-controls">
+		  <label for="product-1">Первый</label>
+		  <label for="product-2">Второй</label>
+		  <label for="product-3">Третий</label>
 		</div>
+		<ul class="slider-list">
+		  <li class="slider-item slide" id="slide1">
+		    <h3 class="slide-title">
+			  Крем-брюле и пломбир с малиновым джемом
+		    </h3>
+		    <a class="buttonS slide-button" href="#">Давайте оба!</a>
+		  </li>
+		  <li class="slider-item slide" id="slide2">
+			<h3 class="slide-title">
+			  Шоколадный пломбир и лимонный сорбет
+			</h3>
+			<a class="buttonS slide-button" href="#">Давайте оба!</a>
+		  </li>
+		  <li class="slider-item slide" id="slide3">
+		  <h3 class="slide-title">
+			  Пломбир с помадкой и клубничный щербет
+		  </h3>
+		  <a class="buttonS slide-button" href="#">Давайте оба!</a>
+		  </li>
+		</ul>
+	  </section>
 	</div>
-<!-- Слайдер завершен -->
+  </div>
 <!-- Малинки и шоколадки даром -->
 	  <section class="features">
 	    <h2 class="visually-hidden"></h2>
@@ -141,62 +138,54 @@
 	  </section>
 <!-- Малинки и шоколадки даром закончились-->
 <!-- Блок с мороженками -->
-	  <section class="product">
-	    <div class="product-item">
-		  <p class="hit"></p>
-		  <img src="./img/1.jpg" width="267" height="270" alt="Мороженое сливочное с апельсиновым джемом">
-			<p class="cost">
-				310 &#8381 
-				<span class="measurement">/кг</span>
-			</p>
-			<div class="product-description">
-				<p>	Сливочное с апельсиновым
-					джемом и цитрусовой стружкой
-				</p>
-			</div>
-		</div>
-		<div class="product-item">
-		  <p class="hit"></p>
-		  <img src="./img/2.jpg" width="267" height="270" alt="Мороженое сливочно-кофейное">
-			<p class="cost">
-				390 &#8381 
-				<span class="measurement">/кг</span>
-			</p>
-			<div class="product-description">
-				<p>	Сливочно-кофейное с кусочками
-					шоколада
-				</p>
-			</div>
-		</div>
-		<div class="product-item">
-		  <p class="hit"></p>
-		  <img src="./img/3.jpg" width="267" height="270" alt="Мороженое сливочно-клубничное">
-			<p class="cost">
-				355 &#8381 
-				<span class="measurement">/кг</span>
-			</p>
-			<div class="product-description">
-				<p>	Сливочно-клубничное с
-					присыпкой белого шоколада
-				</p>
-			</div>
-		</div>
-		<div class="product-item">
-		  <p class="hit"></p>
-		  <img src="./img/4.jpg" width="267" height="270" alt="Мороженое сливочное крем-брюле">
-			<p class="cost">
-				415 &#8381 
-				<span class="measurement">/кг</span>
-			</p>
-			<div class="product-description">
-				<p>	Сливочное крем-брюле с
-					карамельной подливкой
-				</p>
-			</div>
-
-		</div>
-	  </section>
+  <section class="products">
+    <h2 class="visually-hidden-product">Товар - мороженое</h2>
+      <ul class="products-order">
+        <li class="products-item products-item">
+        	<span class="visually-hidden-product">Хит</span>
+          <h3><a class="product-title" href="#">      	Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          </h3>
+          <img src="./img/1.png" width="267" height="267" alt="Мороженое сливочное с апельсиновым джемом">
+		  <p class="product-price">310 &#8381<span class="measurement">/кг</span></p>
+          <div class="product-button-container">
+            <a href="#" class="button container-button">Быстрый просмотр</a>
+          </div>
+          
+ 		</li>
+  		<li class="products-item products-item">
+  		 <span class="visually-hidden-product">Хит</span>
+          <h3>
+          <a class="product-title" href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
+          <img src="./img/2.png" width="267" height="267" alt="Мороженое сливочно-кофейное">
+          <p class="product-price">380 &#8381<span class="measurement">/кг</span></p>
+          <div class="product-button-container">
+            <a href="#" class="button container-button">Быстрый просмотр</a>
+          </div>
+   		</li>
+    	<li class="products-item products-item">
+    	  <span class="visually-hidden-product">Хит</span>
+         <h3><a class="product-title" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+         <a href="#"><img src="./img/3.png" class="product-picture" width="267" height="267" alt="Мороженое сливочно-клубничное"></a>
+         <p class="product-price">355 &#8381<span class="measurement">/кг</span></p>
+         <div class="product-button-container">
+           <a href="#" class="button container-button">Быстрый просмотр</a>
+         </div>
+         
+   		 </li>
+   		 <li class="products-item products-item">
+   		   <span class="visually-hidden-product">Хит</span>
+          <h3><a class="product-title" href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
+          <a href="#"><img src="./img/4.png" class="product-picture" width="267" height="267" alt="Мороженое сливочное крем-брюле"></a>
+          <p class="product-price">415 &#8381<span class="measurement">/кг</span></p>
+          <div class="product-button-container">
+            <a href="#" class="button container-button">Быстрый просмотр</a>
+          </div>
+          
+         </li>
+         </ul>
+       </section>
 <!-- Магазин Глейси -->
+
 	  <section class="store">
 	    <h3 class="store-gllacy"> Магазин Глейси - это онлайн- и офлайн- магазин по продаже мороженного собственного <br>
 			производства на развес </h3>
@@ -323,21 +312,3 @@
   </div>
 </body>
 </html>
-
-<!-- <input type="text" id="text">
-<script>
-text.addEventListener('keydown', function(){
-  this.style.backgroundColor = 'green';
-})
-text.addEventListener('keyup', function(){
-  this.style.backgroundColor = '';
-})
-</script>
-
-
-<input type="text" id="text">
-<script>
-text.addEventListener('keydown', function(){
-  this.style.backgroundColor = 'green';
-})
-</script>

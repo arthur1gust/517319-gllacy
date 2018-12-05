@@ -425,17 +425,11 @@ li.active:hover .sub-menu-hidden {
 .site-wrapper::after {
 	background-image: url("../img/Слайд_3.png");
 }
-.container1 {
+.container-slider {
 	width: 1140px;
 	padding: 0;
 	margin: 0 auto;
 }
-/*
-.main-header {
-	height: 100px;
-	background-color: rgba(0,0,0,0.4);
-}
-*/
 .slider {
 	position: relative;
 	padding-top: 321px;
@@ -569,69 +563,137 @@ li.active:hover .sub-menu-hidden {
 	margin-left: 350px;
 	margin-top: 25px;
 }
+
 /* Блок с товарами (мороженки) */
-.product {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: nowrap;
-	height: 326px;
-	margin-top: 40px;
-}
-.product-item {
-	width: 268px;
-	height: 268px;
-	position: relative;
-	box-sizing: content-box;
-}
-.product-item img {
-	border-radius: 50%;
-}
-.product-item:first-child {
-	margin-left: 20px;
-}
-.product-item:last-child {
-	margin-right: 20px;
-}
-.product-item-hover {
+.visually-hidden-product {
 	display: none;
 }
-.hit {
-	width: 62px;
-	height: 62px;
-	background-image: url("../img/Хит.png");
-	position: absolute;
+.products {
+  margin-top: 40px;
 }
-.cost {
-	font-size: 34px;
-	color: white;
-	font-weight: 700;
-	letter-spacing: 1.2px;
-	position: absolute;
-	bottom: -90px;
+.product-catalog {
+	margin-top: 40px;
 }
-.measurement {
-	font-size: 20px;
-	font-weight: 700;
-	margin-right: 10px;
-}
-.product-description {
-	width: 230px;
-}
-.product-description p {
-	font-size: 14px;
-	color: white;
-	text-align: center;
-	text-decoration: underline dashed;
-	margin-top: 10px;
+.products-order {
+	display: flex;
+	justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
+.products-item {
+	position: relative;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+	width: 267px;
+	min-height: 363px;
+	margin-left: 25px;
+}
+
+
+.product-button-container {
+	position: absolute;
+	top: -6px;
+	left: -13px;
+	height: 405px;
+	width: 293px;
+	background-color: rgba(230, 235, 233, 0.2);
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+	border-radius: 5px;
+	z-index: 10;
+	opacity: 0;
+}
+.container-button {
+	position: absolute;
+	left: 45px;
+	top: 343px;
+	z-index: 10;
+	font-size: 18px;
+}
+
+.products-item:hover .product-button-container,
+.products-item:hover + .product-button-container {
+  opacity: 1;
+}
+
+.products-item h3 {
+  position: relative;
+  padding: 0;
+  padding-top: 8px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  text-align: center;
+  z-index: 11;
+}
+
+.product-title-catalog {
+  width: 258px;
+}
+
+.products-item::before {
+  content: " ";
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  width: 61px;
+  height: 61px;
+  background-image: url("../img/Хит.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: 2;
+}
+
+.product-price {
+  position: absolute;
+  bottom: 104px;
+  padding: 0;
+  margin: 0;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  color: #ffffff;
+  z-index: 2;
+}
+.product-price .measurement {
+  font-size: 30px;
+  margin-left: 0px;
+}
+.product img {
+  position: relative;
+  z-index: 1;
+}
+.product-title {
+	text-decoration: underline;
+	text-decoration-color: rgba(255, 255, 255, 0.3);
+	color: #ffffff;
+}
+.product-title:hover,
+.product-title:focus,
+.product-title:active {
+	color: #ffbc9e;
+	text-decoration-color: rgba(255, 188, 158, 0.3);
+}
+
+
+/* ------------------- */
+
+
+
+
+/*--------------------- */
 /* Магазин Глейси */
 
 .store {
 	background-image: url("../img/Вафельный_фон.jpg");
 	height: 310px;
 	width: 1160px;
-	margin-top: 40px;
+	margin-top: 0px;
 	margin-left: 20px;
 	margin-right: 20px;
 	display: inline-block;
