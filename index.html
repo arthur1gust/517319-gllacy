@@ -7,6 +7,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<670e0316-ab0e-4c4c-8cbb-702f7eb671a6>" type="text/javascript"></script>
+    <script src="icon_customImage.js" type="text/javascript"></script>
 </head>
 <body>
 	<!-- Инпуты для слайдера -->
@@ -82,8 +84,6 @@
 	  
   </header>
 <main class="container"> 
-<!-- Контакты --><!-- Решил стилизовать контакты через position: position: absolute -->
- 	
 <!-- Слайдер -->
   <div class="container-slider">
 	<div class="main-header">
@@ -94,19 +94,19 @@
 		  <label for="product-3">Третий</label>
 		</div>
 		<ul class="slider-list">
-		  <li class="slider-item slide" id="slide1">
+		  <li class="slider-item slide slide_1" id="slide1">
 		    <h3 class="slide-title">
 			  Крем-брюле и пломбир с малиновым джемом
 		    </h3>
 		    <a class="buttonS slide-button" href="#">Давайте оба!</a>
 		  </li>
-		  <li class="slider-item slide" id="slide2">
+		  <li class="slider-item slide slide_2" id="slide2">
 			<h3 class="slide-title">
 			  Шоколадный пломбир и лимонный сорбет
 			</h3>
 			<a class="buttonS slide-button" href="#">Давайте оба!</a>
 		  </li>
-		  <li class="slider-item slide" id="slide3">
+		  <li class="slider-item slide slide_3" id="slide3">
 		  <h3 class="slide-title">
 			  Пломбир с помадкой и клубничный щербет
 		  </h3>
@@ -241,6 +241,9 @@
 	  </section>
 	</div>
 <!-- Добавляю карту -->
+
+
+
 	  <section class="map">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7994.514346894692!2d30.319668!3d59.938305!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1543662699121" width="1198" height="432" frameborder="0" style="border:0" allowfullscreen>
 		</iframe>
