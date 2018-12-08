@@ -245,6 +245,7 @@ li.active:focus .sub-menu-hidden {
 .sub-menu-hidden .sub-menu-hidden-catalog:hover,
 .sub-menu-hidden .sub-menu-hidden-catalog:focus {
   background-color: #d07058;
+
 }
 
 
@@ -1234,267 +1235,332 @@ footer {
 }
 
 /* Сливочное мороженое */
-.filter h1 {
+.filter-title {
+  padding: 0 27px;
+  margin: 0;
+  margin-top: 5px;
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+.visually-hidden-filter {
+	display: none;
+}
+.filter {
+  padding: 0;
+  margin: 0;
+  margin-top: 35px;
+  margin-left: 27px;
+}
+.filter-form {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 890px;
+}
+.filter-form fieldset {
 	padding: 0;
 	margin: 0;
-	margin-left: 25px;
-	margin-top: 10px;
+	border: none;
+	margin-right: 11px;
+	margin-bottom: 15px;
 }
-.filter-item {
-	display: flex;
-	justify-content: flex-start;
-}
-.filler {
-	display: flex;
-	justify-content: flex-start;
-}
-.sort label {
-    display: block;
-    margin-top: 35px;
-    margin-bottom: 5px;
-    margin-left: 45px;
-    width: 200px;
-    color: #ffffff;
-    font-size: 14px;
-}
-select {
-	width: 192px;
-  	padding-left: 10px ;
-  	font-size: 16px;
-  	height: 36px;
-  	background-color: #a9b9af;
-  	border-radius: 20px;
-  	color: #ffffff;
-  	margin-left: 27px;
 
-	-webkit-appearance: none; 
-    -moz-appearance: none;
-    appearance: none;       /* Убираем стрелку по умолчанию */
-    background-image: url("../img/icon-down-dir.png"); 
-    background-repeat: no-repeat;
-    background-position: 170px;
-}
-select::-ms-expand { 
-    display: none; /* Для браузера ie10 и ie11 */
-}
-select:hover {
-	color: #000000;
-	background-image: url("../img/svg/icon-down-dir.svg");
-}
-.range-legend{
-	display: block;
-	margin-left: 15px;
-	color: #ffffff;
+.filter-form legend {
+	padding-left: 15px;
+	padding-bottom: 5px;
 	font-size: 14px;
-	margin-top: 35px;
+	font-weight: 500;
+	line-height: 16px;
+	color: #ffffff;
+}
+.filter-sort {
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.2);
+	background-image: url("../img/icon-down-dir.png");
+	background-position: 167px 13px;
+	border-radius: 20px;
+	background-repeat: no-repeat;
+}
+.filter-sort-select {
+	width: 193px;
+	height: 36px;
+	padding: 10px 14px 9px 14px;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	color: #ffffff;
+	cursor: pointer;
+	-webkit-appearance: none;  /* Удаление стандартной пиктограммы */
+	-moz-appearance: none;     /* во всех браузерах */
+	appearance: none;          /* иначе она остается в IE*/
+	background-color: transparent;
+	border: none;
+	border-radius: 20px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.filter-sort-select option {
+	padding-bottom: 5px;
+}
+
+.filter-sort-select option:last-child {
+	padding-bottom: 8px;
+}
+.filter-sort-select:hover {
+	color: #323232;
+	background-image: url("../img/svg/icon-down-dir.svg");
+	background-repeat: no-repeat;
+	background-position: 167px 13px;
+	outline: none;
+}
+.filter-sort-select::-ms-expand { 
+	display: none;  /* Для браузеров IE-10 и IE-11  */
+}
+.filter-price-fieldset {
+	position: relative;
+	width: 220px;
+}
+.price-filter {
+	position: relative;
+	left: 60px;
+	margin-top: -23px;
+}
+.price-filter input[type="text"] {
+	width: 25px;
+	padding: 0;
+	margin: 0;
+	padding-bottom: 5px;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 400;
+	color: #ffffff;
+	background-color: transparent;
+	border: none;
+}
+.price-filter span {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 500;
+	color: #ffffff;
+}
+.visually-hidden-fieldset {
+	display: none;
+}
+.range {
+	width: 220px;
+	min-height: 36px;
+	background-color: rgba(255, 255, 255, 0.2);
+	background-image: none;
+	border-radius: 20px;
 }
 .range-controls {
-	width: 220px;
-	height: 36px;
-	font-size: 16px;
-	background-color: #a9b9af;
-	border-radius: 20px;
-  	color: #ffffff;
-  	display: inline-block;
-  	margin-top: 5px;
+	position: relative;
+	padding: 16px 20px 0px 21px;
 }
-.value {
-	width: 178px;
+.range-controls .scale-filter {
 	height: 4px;
-	background-color: rgba(248,247,244,0.5);
-	margin-left: 23px;
-	margin-top: 15px;
-	display: block;
+	background-color: rgba(255, 255, 255, 0.5);
 }
-.line-catalog {
-	background-color: #f8f7f4;
-	width: 90px;
+.range-controls .line-filter {
+	width: 118px;
 	height: 4px;
-	margin-left: 20px;
-}
-.range .toggle {
-  position: absolute;
-  padding: 0;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  border: 8px solid #ffffff;
-  border-radius: 50%;
-  background-color: #ababab;
-  box-shadow: 0 2px 0 rgba(171,171,171,0.3);
-
-}
-.circle-left {
-	margin-top: -32px;
-	margin-left: 40px;
-}
-.circle-right {
-	margin-left: 130px;
-	margin-top: -32px;
-}
-.circle-legend {
-	margin-top: 35px;
-	display: block;
-	margin-left: 25px;
-	color: #ffffff;
-	font-size: 14px;
-}
-.filter-circle {
-	display: flex;
-	justify-content: flex-start;
-	width: 416px;
-	height: 36px;
-	font-size: 16px;
-	background-color: #a9b9af;
-	border-radius: 20px;
-  	color: #ffffff;
-  	margin-top: 5px;
-  	margin-left: 15px;
-  	line-height: 5px;
-
-}
-.circle_0 {
-	margin-left: 10px;
-	display: flex;
-	width: 55px;
-}
-.circle_0::before {
-	content: url("../img/radio-off-usually.png"); 
-	margin-top: 5px;
-	margin-right: 10px;
-}
-.circle_0:hover::before {
-	content: url("../img/svg/radio-off.svg"); 
-}
-.circle_10 {
-	margin-left: 18px;
-	display: flex;
-	width: 88px;
-}
-.circle_10::before {
-	content: url("../img/radio-on-usually.png"); 
-	margin-top: 5px;
-	margin-right: 10px;
-}
-.circle_10:hover::before {
-	content: url("../img/svg/radio-on.svg"); 
-	margin-top: 5px;
-	margin-right: 10px;
-}
-.circle_before_30 {
-	margin-left: 18px;
-	display: flex;
-	width: 88px;
-}
-.circle_before_30::before {
-	content: url("../img/radio-off-usually.png"); 
-	margin-top: 5px;
-	margin-right: 10px;
-}
-.circle_before_30:hover::before {
-	content: url("../img/svg/radio-off.svg"); 
-	margin-top: 5px;
-	margin-right: 10px;
-}
-.circle_over_30 {
-	margin-left: 18px;
-	display: flex;
-	width: 112px;
-}
-.circle_over_30::before {
-	content: url("../img/radio-off-usually.png"); 
-	margin-top: 5px;
-	margin-right: 10px;
-}
-.circle_over_30:hover::before {
-	content: url("../img/svg/radio-off.svg"); 
-	margin-top: 5px;
-	margin-right: 10px;
-}
-.filter-legend {
-	margin: 0;
-	padding: 0;
-	margin-top: 20px;
-	display: block;
-	margin-left: 40px;
-	color: #ffffff;
-	font-size: 14px;
-}
-.filler {
-	display: flex;
-	justify-content: flex-start;
-	width: 702px;
-	height: 36px;
-	font-size: 16px;
-	background-color: #a9b9af;
-	border-radius: 20px;
-  	color: #ffffff;
-  	margin-top: 45px;
-  	margin-left: -105px;
-  	line-height: 5px;
-}
-.filler-description-cheked {
-	margin-left: 15px;
-	margin-right: 10px;
-	display: flex;
-	line-height: 2px;
-}
-.filler-description-cheked::before {
-	content: url("../img/checkbox-on-usually.png"); 
-	margin-top: -10px;
-	margin-right: 5px;
-}
-.filler-description-cheked:first-child {
-	width: 88px;
-}
-.filler-description-cheked:nth-child(2) {
-	width: 188px;
-}
-.filler-description-cheked:hover::before {
-	content: url("../img/svg/checkbox-on.svg"); 
-	margin-top: -10px;
-	margin-right: 5px;
-}
-.filler-description-no_cheked {
-	margin-left: 15px;
-	margin-right: 10px;
-	display: flex;
-	line-height: 2px;
-	width: 94px;
-}
-.filler-description-no_cheked::before {
-	content: url("../img/checkbox-off-usually.png"); 
-	margin-top: -10px;
-	margin-right: 5px;
-}
-.filler-description-no_cheked:hover::before {
-	content: url("../img/svg/checkbox-off.svg"); 
-	margin-top: -10px;
-	margin-right: 5px;
-}
-.button-filter {
-	margin-top: 45px;
-	margin-left: 15px;
-	width: 144px;
-	height: 37px;
-	border: 1px solid #fcfcfc;
-	border-radius: 50px;
-	color: #ffffff;
-	background-color: #a6b7ae;
-}
-.button-filter:hover {
-	border: none;
-	outline: none;
-	color: #000000;
+	margin-left: 14px;
 	background-color: #ffffff;
 }
-.button-filter:active {
-	border: none;
-	outline: none;
-	color: #000000;
+.range-toggle {
+	position: absolute;
+	padding: 0;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	border: 8px solid #ffffff;
+	border-radius: 50%;
+	background-color: #ababab;
+	box-shadow: 0 2px 0 rgba(171,171,171,0.3);
+}
+.range-toggle-min {
+	top: 8px;
+	left: 35px;
+}
+.range-toggle-max {
+	top: 8px;
+	left: 133px;
+}
+.range-toggle:hover,
+.range-toggle:focus {
+	 /* Для небольшого увеличения размера при наведении, вроде как в стайл-гайде размер увеличивается*/
+	transform: scale(1.1);
+	cursor: pointer;
+}
+.circle {
+  width: 415px;
+}
+.circle-filter,
+.filler-filter {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 0;
+	padding: 9px 14px;
+	margin: 0;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	list-style: none;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+}
+.circle-filter .filter-item {
+	margin-right: 19px;
+}
+
+.circle-filter .filter-item:nth-child(4) {
+	margin-right: 0px;
+}
+
+.circle-filter label {
+	position: relative;
+	display: block;
+	padding-left: 31px;
+	cursor: pointer;
+	color: #ffffff;
+}
+/* Большие кружки */
+.filter-input-radio + label::before {
+	content: "";
+	position: absolute;
+	top: -3px;
+	left: -5px;
+	width: 22px;
+	height: 22px;
+	border: 3.5px solid rgba(255, 255, 255, 0.8);
+	border-radius: 20px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* Чтобы не были видны radio */
+.visually-hidden-input {
+	display: none;
+}
+/* Большие кружки при наведении */
+.filter-input-radio:hover + label::before {
+	border: 3.5px solid rgba(255, 255, 255, 1);
+}
+/* Обводка больших кружков */
+.filter-input-radio:disabled + label::before {
+	border: 3.5px solid rgba(255, 255, 255, 0.4);
+}
+/* Точка при выборе */
+.filter-input-radio:checked + label::after {
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: 2px;
+	width: 8px;
+	height: 8px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 20px;
+}
+.filler {
+	width: 703px;
+}
+.filler-filter .filter-item {
+	margin-right: 20px;
+	margin-bottom: 2px;
+}
+.filler-filter .filter-item:nth-child(2) {
+	margin-right: 21px;
+}
+
+.filler-filter .filter-item:nth-child(3) {
+	margin-right: 24px;
+}
+
+.filler-filter .filter-item:nth-child(5) {
+	margin-right: 0px;
+}
+/* Варианты выбора шоколадные, присыпки, фрукты, сиропы, джемы */
+.filler-filter label {
+	position: relative;
+	display: block;
+	padding-left: 32px;
+	cursor: pointer;
+	color: #ffffff;
+}
+/* Добавляю чекбоксы без галочек  */
+.filter-input-checkbox + label::before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 20px;
+	height: 20px;
+	background-image: url("../img/svg/checkbox-off.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+	opacity: 0.8;
+}
+.filter-input-checkbox:hover + label::before {
+	opacity: 1;
+}
+
+.filter-input-checkbox:disabled + label::before {
+	opacity: 0.4;
+}
+/* Добавляю чекбоксы с галочками при выборе  */
+.filter-input-checkbox:checked + label::before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 23px;
+	height: 20px;
+	background-image: url("../img/svg/checkbox-on.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+	opacity: 0.8;
+}
+.filter-input-checkbox:checked:hover + label::before {
+	opacity: 1;
+}
+
+.filter-input-checkbox:checked:disabled + label::before {
+	opacity: 0.4;
+}
+.filter-input:focus + label::before {
+	outline: thin dotted;
+	outline: 5px auto -webkit-focus-ring-color;
+}
+.filter-button {
+	display: inline-block;
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	vertical-align: top;
+	text-align: center;
+	color: #ffffff;
+	padding: 7px 27px 7px 28px;
+	margin-top: 5px;
+	align-self: center;
+	background-color: #a6b7ad;
+	border-radius: 50px;
+	border: 2px solid #ffffff;
+	cursor: pointer;
+}
+
+.filter-button:hover {
+	color: #323232;
+	background-color: #ffffff;
+}
+
+.filter-button:active {
+	color: #323232;
 	background-color: #ededed;
-	//box-shadow: inset 10px 2px 2px 3px rgba(105, 105, 105, 0);
-	box-shadow: 0 2px 2px #575555 inset; 
+	box-shadow: inset 0px 2px 1px 0px #696969;
 }
 
 /* Не понимаю почему .product не срабатывает и его приходится дублировать, хотя этот кусок кода уже был ранее */
