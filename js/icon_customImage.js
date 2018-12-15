@@ -1,54 +1,48 @@
-ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [55.751574, 37.573856],
-            zoom: 9
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
+ymaps.ready(init);
 
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
+var placemarks = [
+    
+    
+    {
+        latitude: 59.940000,
+        longitude: 30.322149,
+        
+    }
+],
+    geoObjects= [];
 
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Собственный значок метки',
-            balloonContent: 'Это красивая метка'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'img/pin.png',
-            // Размеры метки.
-            iconImageSize: [30, 42],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
-        }),
+function init() {
+    var map = new ymaps.Map('map', {
+        center: [59.938870, 30.329463],
+        zoom: 16,
+        controls: ['zoomControl'],
+        behaviors: ['drag']
+    });
 
-        myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
-            hintContent: 'Собственный значок метки с контентом',
-            balloonContent: 'А эта — новогодняя',
-            iconContent: '12'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#imageWithContent',
-            // Своё изображение иконки метки.
-            iconImageHref: 'images/ball.png',
-            // Размеры метки.
-            iconImageSize: [48, 48],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-24, -24],
-            // Смещение слоя с содержимым относительно слоя с картинкой.
-            iconContentOffset: [15, 15],
-            // Макет содержимого.
-            iconContentLayout: MyIconContentLayout
-        });
+    for (var i = 0; i < placemarks.length; i++) {
+            geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude],
+            {
+                
+            },
+            {
+                iconLayout: 'default#image',
+                iconImageHref: './img/pin.png',
+                iconImageSize: [194, 141],
+                iconImageOffset: [0, 0]
+            });
+    }
 
-    myMap.geoObjects
-        .add(myPlacemark)
-        .add(myPlacemarkWithContent);
-});
+    var clusterer = new ymaps.Clusterer({
+        clusterIcons: [
+            {
+                href: './img/L.png',
+                size: [100, 100],
+                offset: [0, 0]
+            }
+        ],
+        clusterIconContentLayout: null
+    });
+
+    map.geoObjects.add(clusterer);
+    clusterer.add(geoObjects);
+}
