@@ -458,7 +458,8 @@ h1 {
 /*  Текст предустановленный в placeholder делаю не жирным, а при наборе текст останется толщиной 700 */
 .search-form input[type="text"]::placeholder,
 .popup-login-form input[type="text"]::placeholder,
-.popup-login-form input[type="password"]::placeholder {
+.popup-login-form input[type="password"]::placeholder,
+.post input[type="text"]::placeholder {
   font-weight: 400;
   color: #b2b2b2;
 }
@@ -466,35 +467,40 @@ h1 {
 /* Для кроссбраузерности:  */
 .search-form input[type="text"]::-webkit-input-placeholder,
 .popup-login-form input[type="text"]::-webkit-input-placeholder,
-.popup-login-form input[type="password"]::-webkit-input-placeholder {
+.popup-login-form input[type="password"]::-webkit-input-placeholder,
+.post input[type="text"]::-webkit-input-placeholder {
   font-weight: 400;
   color: #b2b2b2;
 }
 
 .search-form input[type="text"]:-ms-input-placeholder,
 .popup-login-form input[type="text"]:-ms-input-placeholder,
-.popup-login-form input[type="password"]:-ms-input-placeholder {
+.popup-login-form input[type="password"]:-ms-input-placeholder,
+.post input[type="text"]:-ms-input-placeholder {
   font-weight: 400;
   color: #b2b2b2;
 }
 
 .search-form input[type="text"]::-ms-input-placeholder,
 .popup-login-form input[type="text"]::-ms-input-placeholder,
-.popup-login-form input[type="password"]::-ms-input-placeholder {
+.popup-login-form input[type="password"]::-ms-input-placeholder,
+.post input[type="text"]::-ms-input-placeholder {
   font-weight: 400;
   color: #b2b2b2;
 }
 /* Стилизация input'ов форм при наведении  */
 .search-form input[type="text"]:hover,
 .popup-login-form input[type="text"]:hover,
-.popup-login-form input[type="password"]:hover {
+.popup-login-form input[type="password"]:hover,
+.post input[type="text"]:hover {
   border: 2px solid rgba(154, 154, 154, 0.52);
   padding: 9px 13px 7px;
 }
 /* Стилизация input'ов форм при фокусе  */
 .search-form input[type="text"]:focus,
 .popup-login-form input[type="text"]:focus,
-.popup-login-form input[type="password"]:focus {
+.popup-login-form input[type="password"]:focus,
+.post input[type="text"]:focus {
   border: 2px solid rgba(46, 136, 228, 0.52);
   padding: 9px 13px 7px;
   outline: none;
@@ -565,8 +571,13 @@ h1 {
 	font-size: 13px;
 }
 .cart-close {
-	content: url("../img/svg/x.svg");
+	background-image: url("../img/svg/x.svg");
 	margin-left: 16px;
+	margin-top: 25px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	width: 17px;
+	height: 17px;
 }
 .cart-image {
 	width: 34px;
@@ -574,7 +585,7 @@ h1 {
 	margin-left: 15px;
 }
 .cart-image-raspberry {
-	content: url("../img/cart-small-1.jpg");
+	background-image: url("../img/cart-small-1.jpg");
 	border-radius: 50%;
 	margin-top: 15px;
 }
@@ -592,7 +603,7 @@ h1 {
 	margin-left: 30px;
 }
 .cart-image-strawberry {
-	content: url("../img/cart-small-2.jpg");
+	background-image: url("../img/cart-small-2.jpg");
 	border-radius: 50%;
 	margin-top: 15px;
 }
@@ -614,7 +625,7 @@ h1 {
 	margin-right: 15px;
 	font-size: 15px;
 	font-weight: 700;
-	margin-top: 12px;
+	margin-top: 10px;
 	margin-bottom: 12px;
 }
 .button-cart {
@@ -1000,10 +1011,25 @@ h1 {
 }
 .send-button {
 	margin-left: 15px;
+	margin-top: 20px;
 	width: 128px;
 	height: 45px;
 	line-height: 45px;
-	font-size: 16px;
+	font-size: 18px;
+	font-weight: 700;
+	display: inline-block;
+}
+.post-contact {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
 }
 .post input {
 	width: 368px;
@@ -1012,7 +1038,7 @@ h1 {
 	padding-left: 15px;
 	border: none;
 	border: 1px solid #d3d3d2;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 .post input:hover {
 	border: none;
@@ -1066,9 +1092,7 @@ h1 {
       -ms-animation-duration: 0.7s;
           animation-duration: 0.7s;
 }
-.modal-feedback-wrap-show {
-  display: block;
-}
+
 .modal-feedback-wrap {
   display: none;
   position: fixed;
@@ -1079,7 +1103,9 @@ h1 {
   z-index: 20;
   background-color: rgba(0, 0, 0, 0.3);
 }
-
+.modal-feedback-wrap-show {
+  display: block;
+}
 .visually-hidden-popap {
 	display: none;
 }
@@ -1214,6 +1240,113 @@ h1 {
       -ms-animation-duration: 0.6s;
           animation-duration: 0.6s;
 }
+@-webkit-keyframes error {
+  0%,
+  100% {
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+        -webkit-transform: translate(-52%, -50%);
+            -ms-transform: translate(-52%, -50%);
+                transform: translate(-52%, -50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+        -webkit-transform: translate(-48%, -50%);
+            -ms-transform: translate(-48%, -50%);
+                transform: translate(-48%, -50%);
+  }
+}
+
+@keyframes error {
+  0%,
+  100% {
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+        -webkit-transform: translate(-52%, -50%);
+            -ms-transform: translate(-52%, -50%);
+                transform: translate(-52%, -50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+        -webkit-transform: translate(-48%, -50%);
+            -ms-transform: translate(-48%, -50%);
+                transform: translate(-48%, -50%);
+  }
+}
+
+@-webkit-keyframes move {
+  0% {
+      -webkit-transform: translate(-500%, -50%);
+          -ms-transform: translate(-500%, -50%);
+              transform: translate(-500%, -50%);
+  }
+
+  70% {
+      -webkit-transform: translate(-35%, -50%);
+          -ms-transform: translate(-35%, -50%);
+              transform: translate(-35%, -50%);
+  }
+
+  90% {
+      -webkit-transform: translate(-60%, -50%);
+          -ms-transform: translate(-60%, -50%);
+              transform: translate(-60%, -50%);
+  }
+
+  100% {
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes move {
+  0% {
+      -webkit-transform: translate(-500%, -50%);
+          -ms-transform: translate(-500%, -50%);
+              transform: translate(-500%, -50%);
+  }
+
+  70% {
+      -webkit-transform: translate(-35%, -50%);
+          -ms-transform: translate(-35%, -50%);
+              transform: translate(-35%, -50%);
+  }
+
+  90% {
+      -webkit-transform: translate(-60%, -50%);
+          -ms-transform: translate(-60%, -50%);
+              transform: translate(-60%, -50%);
+  }
+
+  100% {
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+  }
+}
 .feedback {
 	z-index: 10;
 	position: absolute;
@@ -1270,7 +1403,7 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	width: 182px;
-	height: 100px;
+	//height: 100px;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -1367,109 +1500,7 @@ footer {
 	
 }
 /* ---- -------- КАТАЛОГ ----------- */
-.menu-catalog {
-	width: 88px;
-	height: 32px;
-	border-radius: 50px;
-	border-bottom: none;
-	background-color: #d07058;
-	color: #ffffff;
-	line-height: 32px;
-	text-align: center;
-	margin-right: 20px;
-	margin-top: -5px;
-}
-.cart-catalog {
-	color: black;
-	width: 120px;
-	height: 32px;
-	background-color: #ffffff;
-	border-radius: 50px;
-	line-height: 34px;
-	font-size: 16px;
-	position: relative;
-}
-.cart-catalog::before {
-	content: url("../img/svg/cart-red.svg");
-	margin-left: 17px;
-	margin-right: 5px;
-	vertical-align: middle;
-}
-.cart-hidden {
-	display: none;
-}
-.cart-catalog:hover .cart-hidden {
-	display: block;
-	position: absolute;
-	top: 40px;
-	right: 0px;
-	width: 540px;
-	height: 242px;
-	background-color: #f8f7f4;
-	color: black;
-	border-radius: 10px;
-	z-index: 15;
-	line-height: 30px;
-}
-.cart-row {
-	display: flex;
-	justify-content: flex-start;
-	font-size: 13px;
-}
-.cart-close {
-	content: url("../img/svg/x.svg");
-	margin-left: 16px;
-}
-.cart-image {
-	width: 34px;
-	height: 34px;
-	margin-left: 15px;
-}
-.cart-image-raspberry {
-	content: url("../img/cart-small-1.jpg");
-	border-radius: 50%;
-	margin-top: 15px;
-}
-.cart-description {
-	margin-left: 13px;
-	line-height: 30px;
-}
-.calculation {
-	margin-left: 32px;
-}
-.money {
-	font-weight: 300;
-}
-.price {
-	margin-left: 30px;
-}
-.cart-image-strawberry {
-	content: url("../img/cart-small-2.jpg");
-	border-radius: 50%;
-	margin-top: 15px;
-}
-.strawberry-description {
-	line-height: 20px;
-	width: 217px;
-}
-.line {
-	width: 510px;
-	height: 1px;
-	background-color: #cacac7;
-	margin-left: 10px;
-}
-.total {
-	display: flex;
-	justify-content: flex-end;
-	margin-right: 15px;
-}
-.button-cart {
-	width: 172px;
-	height: 46px;
-	font-size: 18px;
-	margin-left: 353px;
-	margin-top: -5px;
-}
+
 /* Хлебные крошки */
 .breadcrumbs {
 	display: flex;

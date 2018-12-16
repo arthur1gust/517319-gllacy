@@ -1,8 +1,6 @@
 ymaps.ready(init);
 
 var placemarks = [
-    
-    
     {
         latitude: 59.940000,
         longitude: 30.322149,
