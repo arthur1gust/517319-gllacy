@@ -770,6 +770,9 @@ h1 {
 	background-color: #9d8b84;
 	background-image: url("../img/Slide_3.png");
 }
+.visually-hidden-features {
+	display: none;
+}
 .feature-list {
 	display: flex;
 	justify-content: space-between;
@@ -969,6 +972,9 @@ h1 {
 	vertical-align: middle;
 }
 /*   2 блока: методы сервировки и почта   */
+.visually-hidden-post {
+	display: none;
+}
 .blog-post {
 	display: flex;
 	justify-content: space-between;
