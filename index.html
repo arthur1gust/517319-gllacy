@@ -83,7 +83,7 @@
 <main class="container"> 
 <!-- Слайдер -->
   <div class="container-slider">
-	<div class="main-header">
+	<div class="main-header-slider">
 	  <section class="slider">
 		<div class="slider-controls">
 		  <label for="product-1">Первый</label>
@@ -120,14 +120,14 @@
 		  <div class="feature-item raspberry">
 		    <h3>Малинка даром!</h3>
 			<p>
-				При покупке 2кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
+				При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
 			</p>
 			<a class="button button-raspberry" href="order.html">Хочу варенье!</a>
 		  </div>
 		  <div class="feature-item chocolate">
 		    <h3>Шоколадки даром!</h3>
 			<p>
-				При покупке 2кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
+				При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
 			</p>
 			<a class="button button-chocolate" href="order.html">Хочу шоколадки!</a>
 		  </div>
@@ -138,9 +138,9 @@
   <section class="products">
     <h2 class="visually-hidden-product">Товар - мороженое</h2>
       <ul class="products-order">
-        <li class="products-item products-item">
+        <li class="products-item">
         	<span class="visually-hidden-product">Хит</span>
-          <h3><a class="product-title" href="#">      	Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          <h3><a class="product-title product-title-first" href="#">      	Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           </h3>
           <img src="./img/1.png" width="267" height="267" alt="Мороженое сливочное с апельсиновым джемом">
 		  <p class="product-price">310 &#8381;<span class="measurement">/кг</span></p>
@@ -152,7 +152,7 @@
   		<li class="products-item products-item">
   		 <span class="visually-hidden-product">Хит</span>
           <h3>
-          <a class="product-title" href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
+          <a class="product-title product-title-second" href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
           <img src="./img/2.png" width="267" height="267" alt="Мороженое сливочно-кофейное">
           <p class="product-price">380 &#8381;<span class="measurement">/кг</span></p>
           <div class="product-button-container">
@@ -182,23 +182,23 @@
        </section>
 <!-- Магазин Глейси -->
 	  <section class="store">
-	    <h3 class="store-gllacy"> Магазин Глейси - это онлайн- и офлайн- магазин по продаже мороженного собственного 
+	    <h3 class="store-gllacy"> Магазин Глэйси &#8212; это онлайн- и офлайн-магазин по продаже мороженого собственного 
 			производства на развес </h3>
 		<div class="store-items">
 		  <div class="store-item ice_cream">
-			<p> Все наше мороженное изготавливается на собственном
+			<p> Все наше мороженое изготавливается на собственном
 				производстве, с использованием современного оборудования
 				и проверенных временем технологий.
 			</p>
 		  </div>
 		  <div class="store-item cow">
-			<p> Закупка ингридиентов производится только у проверенных
+			<p> Закупка ингредиентов  производится только у проверенных
 				фермерских хозяйств и компаний, с которыми нас связывает
 				долговременное сотрудничество.
 			</p>
 		  </div>
 		  <div class="store-item sheet">
-			<p> Для приготовления мороженного используются настоящие
+			<p> Для приготовления мороженого используются настоящие
 				сливки и молоко высочайшего качества. Все дополнительные
 				ингридиенты и добавки произведены из натурального,
 				экологически чистого сырья.
@@ -217,10 +217,11 @@
 	  <div class="blog-post">
 	  <article class="blog">
 		<p class="new">Новое в нашем блоге</p>
-		<h3 class="serv"> 
+		<h3 class="serv"><a href="#"> 
 			10 способов сервировки
 			фруктовых щербетов к
 			столу
+		</a>
 		</h3>
 	  </article>
 	  <section class="post">
@@ -228,7 +229,7 @@
 		<p class="post-description">
 			Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
 			всего самого вкусного, что у нас происходит. Обещаем не спамить
-			и не слать ненужной ерунды. Честно =)
+			и не слать всякой ненужной ерунды. Честно =)
 		</p>
 		<form action="send.php">
 			<div class="post-contact">
@@ -256,7 +257,9 @@
 	  	  <p class="order-description">
 	  		Для заказов по телефону:
 	  	  </p>
-	  		<span class="order-telephone">8 812 450 25 25</span>
+	  		<p class="order-telephone">
+	  		<span class="order-telephone-contact">8 812 450-25-25</span>
+	  	    </p>
 	  		<p class="order-working_hours">
 	  		  (с 10 до 20 ежедневно)
 	  		</p>
@@ -298,9 +301,15 @@
 		  </ul>
 		<nav class="footer-menu">
 		  <ul>
-		    <li><a class="footer-menu-item supply" href="#">Для поставщиков</a></li>
-			<li><a class="footer-menu-item production">О производстве</a></li>
+
+	 <li class="svg-position"><a class="footer-menu-item supply" href="#">Для поставщиков</a>
+<svg width="15" height="13" viewBox="0 0 15 13"><path fill="#FFF" d="M10.799 0c-1.35 0-2.551.65-3.3 1.661A4.097 4.097 0 0 0 4.199 0C1.875 0 0 1.806 0 4.044 0 7.223 7.499 13 7.499 13s7.499-5.777 7.499-8.956C14.998 1.806 13.123 0 10.799 0z"/>
+</svg>
+		    </li> 
+
+			
 			<li><a class="footer-menu-item documents">Наши документы</a></li>
+			<li><a class="footer-menu-item production">О производстве</a></li>
 			<li><a class="footer-menu-item ecology">Экологические стандарты</a></li>
 		  </ul>
 		</nav>

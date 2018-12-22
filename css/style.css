@@ -517,14 +517,14 @@ h1 {
 /* Стилизация блока контактов  */
 .contact {
   position: absolute;
-  top: 74px;
-  left: 1006px;
+  top: 73px;
+  left: 1008px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   font-size: 14px;
   line-height: 16px;
-  font-weight: 700;
+  font-weight: 500;
   color: #ffffff;
   border: none;
   outline: none;
@@ -680,6 +680,14 @@ h1 {
 	text-align: center;
 	color: #ffffff;
 }
+.main-header-slider {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  //padding: 9px 27px 0;
+  margin: 0 auto;
+  width: 960px;
+}
 .slider-item {
 	margin-top: -30px;
 	//border: 1px solid black;
@@ -689,12 +697,13 @@ h1 {
 .slider-list {
 	margin: 0;
 	padding: 0;
+	//margin-top: 20px;
 	list-style: none;
 }
 .slide-title {
 	width: 700px;
 	margin: 0 auto;
-	margin-top: 10px;
+	margin-top: 24px;
 	margin-bottom: 0px;
 	font-size: 60px;
 	line-height: 60px;
@@ -702,10 +711,13 @@ h1 {
 }
 .slide-button {
 	display: inline-block;
+	padding: 0;
+	margin: 0;
 	margin-top: 30px;
-	padding: 12px 44px;
-	font-weight: 600;
-	font-size: 31px;
+	//width: 278px;
+	padding: 11px 41px;
+	font-weight: 700;
+	font-size: 32px;
 	line-height: 41px;
 	text-align: center;
 	color: #ffffff;
@@ -740,8 +752,8 @@ h1 {
 }
 .slider-controls {
 	position: absolute;
-	bottom: 35px;
-	left: 0;
+	bottom: 58px;
+	left: -93px;
 	z-index: 20;
 	font-size: 0;
 }
@@ -776,39 +788,57 @@ h1 {
 .feature-list {
 	display: flex;
 	justify-content: space-between;
+	margin-top: 5px;
 }
 .feature-item {
 	width: 560px;
-	height: 230px;
+	height: 229px;
 	color: #ffffff;
 	list-style: none;
 	border-radius: 15px;
 }
 .feature-item h3 {
-	font-size: 30px;
-	margin-left: 20px;
+	margin: 0;
+	padding: 0;
+	margin-top: 26px;
+	font-size: 35px;
+	font-weight: 700;
+	margin-left: 19px;
 }
 .raspberry {
-	background-image: url("../img/Малиновый_фон.jpg");
-	margin-left: 26px;
+	background-image: url("../img/raspberry.png");
+	margin-left: 27px;
 }
 .chocolate {
-	background-image: url("../img/Шоколадный_фон.jpg");
-	margin-right: 26px;
+	background-image: url("../img/chocolate.png");
+	margin-right: 27px;
 }
 .feature-item p {
+	margin: 0;
+	padding: 0;
+	margin-top: 26px;
 	font-size: 18px;
-	margin-left: 20px;
+	font-weight: 500;
+	margin-left: 19px;
+	line-height: 22px;
+	letter-spacing: 0.08px;
+	width: 518px;
 } 
 .button-raspberry {
 	width: 165px;
-	margin-left: 375px;
-	margin-top: 25px;
+	margin-left: 374px;
+	margin-top: 44px;
+	font-size: 18px;
+	line-height: 44px;
+	font-weight: 500;
 }
 .button-chocolate {
 	width: 190px;
 	margin-left: 350px;
-	margin-top: 25px;
+	margin-top: 44px;
+	font-size: 18px;
+	line-height: 44px;
+	font-weight: 500;
 }
 /* Блок с товарами (мороженки) */
 .visually-hidden-product {
@@ -819,7 +849,9 @@ h1 {
 }
 .product-catalog {
 	margin-top: 40px;
+	height: 1150px;
 }
+
 .products-order {
 	display: flex;
 	justify-content: flex-start;
@@ -827,9 +859,34 @@ h1 {
     padding: 0;
     margin: 0;
     list-style: none;
+    margin-left: 1px;
 }
 
 .products-item {
+	position: relative;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+	width: 267px;
+	min-height: 363px;
+	margin-left: 26px;
+}
+.product-item {
+	width: 267px;
+	height: 267px;
+	border-radius: 50%;
+} 
+.product-item:first-child,
+.product-item:nth-child(5),
+.product-item:nth-child(9) {
+	margin-left: 20px;
+}
+.product-item:nth-child(4),
+.product-item:nth-child(8),
+.product-item:last-child {
+	margin-right: 20px;
+}
+.products-item-catalog {
 	position: relative;
 	display: flex;
 	flex-direction: column-reverse;
@@ -858,7 +915,9 @@ h1 {
 	font-size: 18px;
 }
 .products-item:hover .product-button-container,
-.products-item:hover + .product-button-container {
+.products-item-catalog:hover .product-button-container,
+.products-item:hover + .product-button-container,
+.products-item-catalog:hover + .product-button-container {
   opacity: 1;
 }
 .products-item h3 {
@@ -868,9 +927,22 @@ h1 {
   margin: 0;
   font-size: 16px;
   line-height: 22px;
+  font-weight: 400;
+  text-align: center;
+  z-index: 11;
+
+}
+.products-item-catalog h3 {
+  position: relative;
+  padding: 0;
+  padding-top: 8px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
   font-weight: 500;
   text-align: center;
   z-index: 11;
+  font-weight: 500;
 }
 .product-title-catalog {
   width: 258px;
@@ -878,7 +950,7 @@ h1 {
 .products-item::before {
   content: " ";
   position: absolute;
-  top: 6px;
+  top: 0px;
   left: 0px;
   width: 61px;
   height: 61px;
@@ -894,10 +966,11 @@ h1 {
   margin: 0;
   font-size: 45px;
   line-height: 45px;
-  font-weight: 700;
+  font-weight: 500;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
   color: #ffffff;
   z-index: 2;
+  word-spacing: -7px;
 }
 .product-price .measurement {
   font-size: 30px;
@@ -911,65 +984,105 @@ h1 {
 	text-decoration: underline;
 	text-decoration-color: rgba(255, 255, 255, 0.3);
 	color: #ffffff;
+	display: block;
+	//height: 40px;
+	//outline: 1px solid black;
+	margin-top: 1px;
 }
+.product-title-first,
+.product-title-second {
+	margin-top: 5px;
+}
+
 .product-title:hover,
 .product-title:focus,
 .product-title:active {
 	color: #ffbc9e;
 	text-decoration-color: rgba(255, 188, 158, 0.3);
 }
+/* Не понимаю почему .product не срабатывает и его приходится дублировать, хотя этот кусок кода уже был ранее */
+
+
+
 /* Магазин Глейси */
 .store {
 	background-image: url("../img/Вафельный_фон.jpg");
-	height: 310px;
-	width: 1160px;
-	margin-top: 0px;
-	margin-left: 20px;
-	margin-right: 20px;
+	height: 306px;
+	width: 1146px;
+	margin-top: -1px;
+	margin-left: 27px;
 	display: inline-block;
-	border-radius: 10px;
+	border-radius: 15px;
 }
 .store-gllacy  {
-	font-size: 22px;
-	font-weight: 700;
-	letter-spacing: 1.2px;
-	line-height: 25px;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 30px;
 	margin-left: 20px;
-	margin-top: 20px;
+	margin-top: 26px;
+	width: 1030px;
+	color: #323232;
+	word-spacing: 1px;
 }
 .store-items {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
 	margin-left: 20px;
-	margin-right: 20px;
+	margin-right: 33px;
+	margin-top: -17px;
+
 }
 .store-item {
-	width: 560px;
 	display: flex;
+	margin: 0;
+	padding: 0;
+}
+.store-item:first-child ,
+.store-item:nth-child(3) {
+	width: 538px;
+}
+.store-item:nth-child(2) ,
+.store-item:nth-child(4) {
+	width: 531px;
 }
 .store-item p {
 	font-size: 16px;
+	line-height: 22px;
+	color: #323232;
+	font-weight: 400;
+	margin-top: 13px;
 }
 .ice_cream::before {
-	content: url("../img/Мороженко.png");
-	margin-right: 10px;
-	vertical-align: middle;
+	content: url("../img/svg/ice-cream.svg");
+	margin-right: 7px;
 }
 .cow::before {
-	content: url("../img/Корова.png");
-	margin-right: 10px;
-	vertical-align: middle;
+	content: url("../img/svg/cow.svg");
+	margin-right: 9px;
+	margin-left: 2px;
 }
 .sheet::before {
-	content: url("../img/Листик.png");
-	margin-right: 10px;
+	content: url("../img/svg/eco.svg");
+	margin-right: 7px;
 	vertical-align: middle;
+	margin-top: -7px;
+}
+.sheet p {
+	margin-top: 6px;
 }
 .thermometer::before {
-	content: url("../img/Градусник.png");
-	margin-right: 10px;
+	content: url("../img/svg/thermometer.svg");
+	margin-right: 9px;
 	vertical-align: middle;
+	margin-top: -7px;
+	margin-left: 2px;
+}
+.thermometer p {
+	margin-top: 6px;
+	//width: 475px;
 }
 /*   2 блока: методы сервировки и почта   */
 .visually-hidden-post {
@@ -984,39 +1097,59 @@ h1 {
 .blog {
 	width: 560px;
 	height: 220px;
-	margin-left: 20px;
-	background-image: url("../img/Клубничный_фон.jpg");
-	border-radius: 10px;
+	margin-left: 27px;
+	background-image: url("../img/strawberry.jpg");
+	border-radius: 15px;
+	background-color: #849d8f;
 }
 .post {
 	width: 560px;
 	height: 220px;
-	margin-right: 20px;
-	background-image: url("../img/Почтовый_фон.png");
-	border-radius: 10px;
+	margin-right: 27px;
+	background-image: url("../img/post.png");
+	border-radius: 15px;
+	background-color: #849d8f;
 }
 .blog p {
 	margin-left: 20px;
-	margin-top: 28px;
+	margin-top: 25px;
+	font-weight: 500;
 }
 .blog h3 {
 	margin-left: 20px;
-	margin-top: 15px;
-	width: 280px;
-	font-size: 22px;
+	margin-top: -12px;
+	width: 285px;
+	font-size: 24px;
+	font-weight: 700;
+	border: none;
+}
+.serv a {
+	color: #323232;
+	line-height: 30px;
 	text-decoration: underline;
-	line-height: 25px;
+}
+.serv a:hover,
+.serv a:focus,
+.serv a:active {
+    color: #e84d37;
+    -webkit-text-decoration-color: rgba(232, 77, 55, 0.3);
+    text-decoration-color: rgba(232, 77, 55, 0.3);
+    cursor: pointer;
 }
 .post-description {
 	font-size: 16px;
-	margin-left: 20px;
-	margin-top: 40px;
+	margin-left: 27px;
+	margin-top: 33px;
+	font-weight: 400;
+	color: #5a5a5a;
+	line-height: 22px;
+	width: 509px;
 }
 .post form {
-	margin-left: 25px;
+	margin-left: 26px;
 }
 .send-button {
-	margin-left: 15px;
+	margin-left: 12px;
 	margin-top: 20px;
 	width: 128px;
 	height: 45px;
@@ -1039,9 +1172,9 @@ h1 {
 }
 .post input {
 	width: 368px;
-	height: 45px;
-	margin-top: 20px;
-	padding-left: 15px;
+	height: 44px;
+	margin-top: 21px;
+	padding-left: 13px;
 	border: none;
 	border: 1px solid #d3d3d2;
 	border-radius: 5px;
@@ -1060,12 +1193,11 @@ h1 {
 }
 /* Карта */
 .map {
-	margin-top: 50px;
+	margin-top: 37px;
 	width: 1200px;
-	height: 432px;
+	height: 428px;
 	background-image: url("../img/карта.jpg");
 	position: relative;
-	border: 1px solid black;
 }
 
 /*  Разметка попапа */
@@ -1359,42 +1491,57 @@ h1 {
 	background-color: #ffffff;
 	width: 304px;
 	height: 306px;
-	top: 40px;
-	right: 50px;
-	border-radius: 10px;
+	top: 61px;
+	right: 26px;
+	border-radius: 15px;
 }
 .addres {
-	margin-left: 25px;
-	margin-top: 32px;
+	margin-left: 26px;
+	margin-top: 29px;
 	font-size: 14px;
 	text-align: left;
+	width: 150px;
+	font-weight: 400;
 }
 .addres-office {
-	margin-left: 25px;
-	line-height: 25px;
+	margin-left: 26px;
+	margin-top: -12px;
+	line-height: 24px;
 	font-weight: 700;
+	width: 224px;
+	font-size: 18px;
 }
 .order {
+	display: block;
 	line-height: 10px;
+	margin-top: 22px;
+	//height: 75px;
 }
 .order-description {
-	margin-left: 25px;
+	margin-left: 26px;
 	font-size: 14px;
 }
 .order-telephone {
-	font-size: 16px;
+	display: block;
+	font-size: 18px;
 	font-weight: 700;
-	margin-left: 25px;
+	margin-left: 26px;
+	margin-bottom: -10px;
 }
 .order-working_hours {
-	margin-left: 25px;
+	display: block;
+	margin-left: 26px;
 	font-size: 14px;
+	margin-top: 23px;
 }
 .contacts-button {
-	margin-left: 25px;
+	margin-left: 26px;
 	width: 252px;
-	margin-top: 20px;
-	font-size: 16px;
+	margin-top: 15px;
+	font-size: 18px;
+	font-weight: 700;
+	height: 44px;
+	line-height: 43px;
 }
 footer {
 	margin: 0;
@@ -1409,18 +1556,32 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	width: 182px;
-	//height: 100px;
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	margin-top: 45px;
-	margin-left: 27px;
+	margin-top: 47px;
+	margin-left: 28px;
+}
+/*
+.footer-social:nth-child(2),
+.footer-social:nth-child(3),
+.footer-social:nth-child(4) {
+	margin-left: 25px;
+}
+*/
+.footer-social-inst {
+	margin-left: 9px;
+}
+.footer-social-fb {
+	margin-left: 9px;
+}
+.footer-social-vk {
+	margin-left: 9px;
 }
 .icon span {
 	display: none;
 }
 .icon {
-	//border: 1px solid black;
 	width: 38px;
 	height: 38px;
 	padding: 10px 20px 10px 20px;
@@ -1454,14 +1615,14 @@ footer {
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
-	width: 329px;
+	width: 359px;
 	min-height: 43px;
 	text-align: left;
 	font-size: 13px;
 	margin: 0;
 	padding: 0;
-	margin-top: 35px;
-	margin-left: 215px;
+	margin-top: 32px;
+	margin-left: 210px;
 }
 .footer-menu li {
 	list-style: none;
@@ -1469,26 +1630,48 @@ footer {
 }
 .footer-menu a {
 	line-height: 20px;
-	margin-left: 20px;
+	margin-left: 30px;
 	color: #ffffff;
 	border-bottom: 1px solid #9db1a5;
 }
+.footer-menu li:nth-child(4) {
+	margin-left: 12px;
+}
 .supply {
 	font-weight: 700;
+	text-decoration: none;
+	position: relative;
+	font-size: 13px;
 }
-.supply::before {
-	content: "";
-	content: url("../img/svg/heart.svg");
-	margin-left: -20px;
-	margin-right: 5px;
-	vertical-align: middle;
+.supply:hover + svg path,
+.supply:active + svg path {
+  fill: #ffbc9e;
+}
+.svg-position {
+	position: relative;
+}
+.footer-menu svg {
+	position: absolute;
+	bottom: 4px;
+	left: 7px;
+}
+.footer-menu-item:hover {
+	color: #ffbc9e;
+	cursor: pointer;
+	border-bottom: 1px solid #ffbc9e;
 }
 .footer-htmlacademy {
 	margin-top: 19px;
 	color: #ffffff;
-	margin-left: 231px;
+	margin-left: 206px;
 	line-height: 10px;
 	font-size: 12px;
+}
+.footer-htmlacademy img {
+	//margin-top: 0;
+}
+.footer-htmlacademy p {
+	margin-top: 5px;
 }
 .footer-htmlacademy a {
 	text-decoration: none;
@@ -1496,6 +1679,11 @@ footer {
 	color: #ffffff;
 	border-bottom: 1px solid #9db1a5;
 	
+}
+.footer-htmlacademy a:hover {
+	color: #ffbc9e;
+	cursor: pointer;
+	border-bottom: 1px solid #ffbc9e;
 }
 /* ---- -------- КАТАЛОГ ----------- */
 
@@ -1850,33 +2038,6 @@ footer {
 	color: #323232;
 	background-color: #ededed;
 	box-shadow: inset 0px 2px 1px 0px #696969;
-}
-/* Не понимаю почему .product не срабатывает и его приходится дублировать, хотя этот кусок кода уже был ранее */
-.product {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	height: 326px;
-	//width: 1180px;
-	margin-top: 40px;
-}
-.product-catalog {
-	height: 1050px;
-}
-.product-item {
-	width: 268px;
-	height: 268px;
-	border-radius: 50%;
-} 
-.product-item:first-child,
-.product-item:nth-child(5),
-.product-item:nth-child(9) {
-	margin-left: 20px;
-}
-.product-item:nth-child(4),
-.product-item:nth-child(8),
-.product-item:last-child {
-	margin-right: 20px;
 }
 /* Пока ничего хитрее не придумал, как опять привязать названия
 классов к номерам рядов */
