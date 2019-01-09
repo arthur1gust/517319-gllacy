@@ -59,17 +59,17 @@ body {
 input[type="radio"].visually-hidden,
 input[type="checkbox"].visually-hidden,
 label.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	-webkit-clip-path: inset(100%);
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 .main-header {
 	position: relative;
@@ -1128,7 +1128,7 @@ label.visually-hidden {
 	vertical-align: middle;
 	border-radius: 15px;
 }
-.store-gllacy  {
+.store-gllacy {
 	font-size: 24px;
 	font-weight: 500;
 	line-height: 30px;
@@ -1257,14 +1257,14 @@ label.visually-hidden {
 	font-weight: 700;
 	border: none;
 }
-.serv a {
+.serv {
 	color: #323232;
 	line-height: 30px;
 	text-decoration: underline;
 }
-.serv a:hover,
-.serv a:focus,
-.serv a:active {
+.serv:hover,
+.serv:focus,
+.serv:active {
 	color: #e84d37;
 	-webkit-text-decoration-color: rgba(232, 77, 55, 0.3);
 	text-decoration-color: rgba(232, 77, 55, 0.3);
@@ -1718,7 +1718,7 @@ textarea.feedback-form-item-input {
 }
 .icon:hover,
 .icon:focus,
-.icon:active  {
+.icon:active {
 	opacity: 1;
 	border: 3px solid rgba(230, 235, 233, 0.7);
 }
@@ -1906,8 +1906,8 @@ textarea.feedback-form-item-input {
 	color: #ffffff;
 	cursor: pointer;
 	-webkit-appearance: none;
-	-moz-appearance: none;   
-	appearance: none;          
+	-moz-appearance: none;
+	appearance: none;
 	background-color: transparent;
 	border: none;
 	border-radius: 20px;

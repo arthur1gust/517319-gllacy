@@ -30,7 +30,6 @@ function init() {
     var clusterer = new ymaps.Clusterer({
         clusterIcons: [
         {
-            
         }
         ],
         clusterIconContentLayout: null
@@ -38,6 +37,7 @@ function init() {
     map.geoObjects.add(clusterer);
     clusterer.add(geoObjects);
 }
+
 var btn = document.querySelector(".contacts-button");
 var WrapSection = document.querySelector(".modal-feedback-wrap");
 var modal = document.querySelector(".modal-feedback");
