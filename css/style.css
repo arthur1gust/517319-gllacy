@@ -200,8 +200,8 @@ label.visually-hidden {
 	border-top-right-radius: 5px;
 }
 .catalog-list li:last-child {
-	padding-bottom: 8px;
-	padding-top: 6px;
+	padding-bottom: 10px;
+	padding-top: 4px;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
